@@ -5,4 +5,4 @@
 data/
 
 # Ignorer les fichiers de configuration
-*.venv
+*venv
