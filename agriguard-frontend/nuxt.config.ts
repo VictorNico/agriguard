@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     // '@vueuse/nuxt',
+    '@nuxt/image',
     '@vite-pwa/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/icon',
@@ -188,6 +189,7 @@ export default defineNuxtConfig({
       }
     }
   },
+
   primevue: {
     options: {
       ripple: true,
@@ -202,10 +204,24 @@ export default defineNuxtConfig({
       }
     }
   },
+
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/sections',
+      pathPrefix: false,
+    }
+  ],
+
   css: [
+    '~/assets/css/main.css',
     'primeicons/primeicons.css',
     'flag-icons/css/flag-icons.min.css'
   ],
+
   appConfig: {
     theme: 'light',
     itemsPerPage: 10,

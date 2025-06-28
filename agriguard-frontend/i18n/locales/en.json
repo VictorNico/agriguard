@@ -5,7 +5,8 @@
   "german": "German",
   "export": "Export",
   "app": {
-    "name": "AgriGuard AI",
+    "main_name": "AgriGuard",
+    "prefix_name": " AI",
     "tagline": "Smart crop protection",
     "description": "AI-powered agricultural pest detection in Cameroon"
   },
@@ -114,13 +115,6 @@
     "share": "Share",
     "download": "Download"
   },
-  "status": {
-    "loading": "Loading...",
-    "processing": "Processing...",
-    "success": "Success",
-    "error": "Error",
-    "completed": "Completed"
-  },
   "offline": {
     "title": "Offline mode",
     "description": "You are currently offline. Some features may be limited.",
@@ -158,12 +152,6 @@
     "grams": "g",
     "kg": "kg"
   },
-  "time": {
-    "morning": "Early morning",
-    "evening": "Evening",
-    "daily": "Daily",
-    "weekly": "Weekly"
-  },
   "rgpd":{
     "consent":{
       "text1": "We use cookies to improve your user experience. By continuing to browse, you accept our",
@@ -187,6 +175,114 @@
         "text": "If you have any questions, please contact us at"
       }
     }
+  },"nav": {
+  "home": "Home",
+  "features": "Features",
+  "dashboard": "Dashboard",
+  "community": "Community",
+  "analyzePlant": "Analyze Plant",
+  "openMainMenu": "Open main menu"
+},
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "user": {
+    "profile": "Your Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "openMenu": "Open user menu"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "viewAll": "View all notifications",
+    "noNotifications": "No notifications",
+    "markAsRead": "Mark as read",
+    "newAlert": "New alert",
+    "systemUpdate": "System update"
+  },
+  "company": {
+    "name": "AgriGuard",
+    "tagline": "Smart protection for your crops",
+    "description": "Your intelligent assistant for crop protection"
+  },
+  "actions": {
+    "analyze": "Analyze",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "connecting": "Connecting...",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "warning": "Warning",
+    "info": "Information",
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "success": "Success",
+    "error": "Error",
+    "completed": "Completed"
+  },
+  "accessibility": {
+    "closeMenu": "Close menu",
+    "openDropdown": "Open dropdown menu",
+    "toggleNavigation": "Toggle navigation",
+    "skipToContent": "Skip to main content",
+    "userAvatar": "User avatar",
+    "logo": "Company logo"
+  },
+  "time": {
+    "morning": "Early morning",
+    "evening": "Evening",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "now": "Now",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This week",
+    "lastWeek": "Last week",
+    "thisMonth": "This month",
+    "lastMonth": "Last month",
+    "minute": "minute",
+    "minutes": "minutes",
+    "hour": "hour",
+    "hours": "hours",
+    "day": "day",
+    "days": "days",
+    "week": "week",
+    "weeks": "weeks",
+    "month": "month",
+    "months": "months",
+    "year": "year",
+    "years": "years",
+    "ago": "ago"
+  },
+  "stats": {
+    "agricultural_losses": "Annual global agricultural losses (FAO)",
+    "cocoa_families": "Families depending on cocoa in Cameroon",
+    "corn_weevil_losses": "CFA francs of annual losses from corn weevil"
+  },
+  "hero": {
+    "title_part1": "Protect your crops with",
+    "title_part2": "artificial intelligence",
+    "description": "In Cameroon, 600,000 families depend on cocoa, but up to 40% of harvests are lost due to pests. Our solution protects your crops and your income.",
+    "demo_button": "View demo",
+    "download_button": "Download app",
+    "image_alt": "Modern agriculture with artificial intelligence"
   }
-
 }

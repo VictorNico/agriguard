@@ -1,5 +1,5 @@
 <template>
-    <div class="card flex justify-center mr-2">
+    <div class="card flex justify-center mx-2">
         <Select v-model="selectedCountry" :options="countries" optionLabel="name" placeholder="Select a Country"
             class="w-full md:w-56">
             <template #value="slotProps">
