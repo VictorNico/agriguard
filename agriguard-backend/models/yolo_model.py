@@ -1,9 +1,9 @@
 from ultralytics import YOLO
 import cv2
 import numpy as np
-
+import os
 class PestDetector:
-    def __init__(self, model_path='weights/yolov11s.pt'):
+    def __init__(self, model_path='weights/yolo11s.pt'):
         self.model_path = model_path
         self.model = None
         self.model_loaded = False
@@ -11,8 +11,7 @@ class PestDetector:
 
     def load_model(self):
         try:
-            # Pour MVP, utiliser modèle pré-entraîné
-            self.model = YOLO('yolov11s.pt')  # Télécharge automatiquement
+            self.model = YOLO(f"{os.getcwd()}/{self.model_path}")
             self.model_loaded = True
             print("✅ Modèle YOLO chargé avec succès")
         except Exception as e:
@@ -43,8 +42,9 @@ class PestDetector:
                             1: "bruche_niebe",
                             2: "cochenille_manioc"
                         }
-
+                        print(result.names.get(class_id, f"pest_{class_id}"))
                         detection = {
+                            "name": result.names.get(class_id, f"pest_{class_id}"),
                             "class": class_names.get(class_id, f"pest_{class_id}"),
                             "confidence": round(confidence, 2),
                             "bbox": [round(x, 2) for x in bbox]

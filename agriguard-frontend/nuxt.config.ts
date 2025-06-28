@@ -147,7 +147,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.NUXT_PUBLIC_API_URL || 'http://localhost:3000/api/',
+      apiBase: process.env.NUXT_PUBLIC_API_URL ?? 'http://localhost:3000',
       serverUrl: process.env.NUXT_PUBLIC_SERVER_URL ?? 'http://localhost:3000',
       supportEmail: process.env.NUXT_PUBLIC_EMAIL_SENDER_SUPPORT ?? 'support@agriguard.ai',
     }
@@ -228,4 +228,8 @@ export default defineNuxtConfig({
       minify: 'terser', // Utilise Terser comme minimiseur
     },
   },
+  // Optimisations production
+  experimental: {
+    payloadExtraction: false
+  }
 })
