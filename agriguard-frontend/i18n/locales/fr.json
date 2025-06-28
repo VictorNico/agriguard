@@ -1,0 +1,191 @@
+{
+  "welcome": "Bienvenue",
+  "french": "Francais",
+  "english": "Anglais",
+  "german": "Allemand",
+  "export": "Exporter",
+  "app": {
+    "name": "AgriGuard AI",
+    "tagline": "Protection intelligente des cultures",
+    "description": "Détection IA des ravageurs agricoles au Cameroun"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "scan": "Scanner",
+    "history": "Historique",
+    "profile": "Profil",
+    "settings": "Paramètres"
+  },
+  "home": {
+    "title": "Détectez les ravageurs instantanément",
+    "subtitle": "Prenez une photo de vos cultures pour identifier les menaces",
+    "cta": {
+      "takePicture": "Prendre une photo",
+      "selectFromGallery": "ou sélectionner depuis la galerie",
+      "analyze": "🔍 Analyser l'image",
+      "analyzing": "Analyse en cours...",
+      "chooseAnother": "📁 Choisir une autre image"
+    },
+    "uploadArea": {
+      "title": "Prendre une photo",
+      "subtitle": "ou sélectionner depuis la galerie",
+      "dragDrop": "Glissez-déposez une image ici"
+    }
+  },
+  "camera": {
+    "permission": {
+      "title": "Accès à la caméra requis",
+      "description": "Pour détecter les ravageurs, nous avons besoin d'accéder à votre caméra",
+      "grant": "Autoriser la caméra",
+      "denied": "Accès refusé. Veuillez autoriser dans les paramètres."
+    },
+    "capture": "Capturer",
+    "retake": "Reprendre",
+    "use": "Utiliser cette photo"
+  },
+  "image": {
+    "selected": "Image sélectionnée",
+    "clear": "Supprimer l'image",
+    "analyzing": "Analyse en cours...",
+    "analyzeButton": "🔍 Analyser l'image",
+    "chooseAnother": "📁 Choisir une autre image"
+  },
+  "results": {
+    "title": "Résultats de l'analyse",
+    "analyzing": "Analyse en cours...",
+    "noPests": {
+      "title": "Aucun ravageur détecté",
+      "description": "Vos cultures semblent en bonne santé !",
+      "icon": "✅"
+    },
+    "confidence": "Confiance",
+    "treatments": "Traitements recommandés",
+    "treatmentDetails": {
+      "product": "Produit",
+      "dosage": "Dosage",
+      "application": "Application",
+      "timing": "Moment d'application"
+    },
+    "urgency": {
+      "high": "Urgent",
+      "medium": "Modéré",
+      "low": "Faible"
+    },
+    "severity": {
+      "high": "Élevée",
+      "medium": "Modérée",
+      "low": "Faible"
+    },
+    "treatment": {
+      "recommended": "Traitements recommandés",
+      "type": {
+        "chimique": "Chimique",
+        "biologique": "Biologique",
+        "naturel": "Naturel",
+        "stockage": "Stockage",
+        "preventif": "Préventif",
+        "curatif": "Curatif"
+      }
+    }
+  },
+  "pests": {
+    "legionnaire_automne": "Légionnaire d'automne",
+    "bruche_niebe": "Bruche du niébé",
+    "cochenille_manioc": "Cochenille du manioc",
+    "mirides_cacao": "Mirides du cacao",
+    "chenille_chou": "Chenille du chou",
+    "puceron": "Puceron",
+    "thrips": "Thrips",
+    "acarien": "Acarien rouge"
+  },
+  "treatments": {
+    "cypermethrine": "Cypermethrine 10% EC",
+    "neem": "Huile de Neem",
+    "bacillus": "Bacillus thuringiensis",
+    "savon_potassique": "Savon potassique"
+  },
+  "buttons": {
+    "analyze": "Analyser",
+    "analyzing": "Analyse en cours...",
+    "retry": "Réessayer",
+    "clear": "Effacer",
+    "cancel": "Annuler",
+    "save": "Sauvegarder",
+    "share": "Partager",
+    "download": "Télécharger"
+  },
+  "status": {
+    "loading": "Chargement...",
+    "processing": "Traitement en cours...",
+    "success": "Succès",
+    "error": "Erreur",
+    "completed": "Terminé"
+  },
+  "offline": {
+    "title": "Mode hors ligne",
+    "description": "Vous êtes actuellement hors ligne. Certaines fonctionnalités peuvent être limitées.",
+    "retry": "Réessayer la connexion",
+    "indicator": "Hors ligne"
+  },
+  "errors": {
+    "generic": "Une erreur s'est produite",
+    "network": "Erreur de connexion réseau",
+    "upload": "Erreur lors de l'envoi de l'image",
+    "camera": "Impossible d'accéder à la caméra",
+    "file": "Format de fichier non supporté",
+    "analysis": "Erreur lors de l'analyse",
+    "server": "Erreur serveur",
+    "timeout": "Délai d'attente dépassé",
+    "retry": "Réessayer",
+    "tryAgain": "Veuillez réessayer"
+  },
+  "install": {
+    "title": "Installer AgriGuard AI",
+    "description": "Installez l'application pour un accès rapide et une utilisation hors ligne",
+    "install": "Installer",
+    "later": "Plus tard",
+    "available": "Installation disponible"
+  },
+  "language": {
+    "switch": "Changer de langue",
+    "french": "Français",
+    "english": "English"
+  },
+  "units": {
+    "percentage": "%",
+    "ml": "ml",
+    "liters": "L",
+    "grams": "g",
+    "kg": "kg"
+  },
+  "time": {
+    "morning": "Tôt le matin",
+    "evening": "Le soir",
+    "daily": "Quotidiennement",
+    "weekly": "Hebdomadairement"
+  },
+  "rgpd": {
+    "consent": {
+      "text1": "Nous utilisons des cookies pour améliorer votre expérience utilisateur. En continuant à naviguer, vous acceptez notre",
+      "text2": "politique de confidentialité",
+      "btn1": "Accepter",
+      "btn2": "Refuser"
+    },
+    "privacy": {
+      "title": "Politique de Confidentialité",
+      "brand": "Votre confidentialité est importante pour nous. Cette politique explique quelles données nous collectons, pourquoi, et comment elles sont utilisées.",
+      "rule1": {
+        "title": "Données collectées",
+        "text": "Nous collectons les cookies pour analyser le trafic et améliorer votre expérience."
+      },
+      "rule2": {
+        "title": "Vos droits",
+        "text": "Vous avez le droit de demander l'accès, la modification ou la suppression de vos données."
+      },
+      "rule3": {
+        "title": "Contact",
+        "text": "Pour toute question, veuillez nous contacter à"
+      }
+    }
+  }
+}

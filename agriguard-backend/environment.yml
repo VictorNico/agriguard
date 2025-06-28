@@ -1,0 +1,17 @@
+name: conia2025
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - Flask==2.3.3
+      - Flask-CORS==4.0.0
+      - ultralytics==8.0.196
+      - Pillow==10.0.0
+      - opencv-python==4.8.1.78
+      - numpy==1.24.3
+      - torch==2.0.1
+      - torchvision==0.15.2
+

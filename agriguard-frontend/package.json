@@ -1,0 +1,38 @@
+{
+  "name": "agriguard-ai",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev -p 8080 --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview -p 8080 --host",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.2.0",
+    "@nuxt/icon": "^1.14.0",
+    "@nuxtjs/i18n": "^9.5.6",
+    "@nuxtjs/tailwindcss": "^7.0.0-beta.0",
+    "@pinia/nuxt": "^0.11.1",
+    "@primevue/forms": "^4.3.5",
+    "@primevue/themes": "^4.3.5",
+    "chart.js": "^4.5.0",
+    "css-select": "^5.2.2",
+    "flag-icons": "^7.5.0",
+    "js-cookie": "^3.0.5",
+    "nuxt": "^3.17.5",
+    "pinia": "^3.0.3",
+    "pinia-plugin-persistedstate": "^4.3.0",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.3.5",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons": "^1.2.2",
+    "@primevue/nuxt-module": "^4.3.5",
+    "@vite-pwa/nuxt": "^1.0.4",
+    "terser": "^5.43.1"
+  }
+}
