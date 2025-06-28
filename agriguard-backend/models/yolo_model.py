@@ -44,8 +44,8 @@ class PestDetector:
                         }
                         print(result.names.get(class_id, f"pest_{class_id}"))
                         detection = {
-                            "name": result.names.get(class_id, f"pest_{class_id}"),
-                            "class": class_names.get(class_id, f"pest_{class_id}"),
+                            "name": result.names.get(class_id, result.names.get(class_id, f"pest_{class_id}")),
+                            "class": class_names.get(class_id, result.names.get(class_id, f"pest_{class_id}")),
                             "confidence": round(confidence, 2),
                             "bbox": [round(x, 2) for x in bbox]
                         }

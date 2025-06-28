@@ -5,7 +5,8 @@
   "german": "Allemand",
   "export": "Exporter",
   "app": {
-    "name": "AgriGuard AI",
+    "main_name": "AgriGuard",
+    "prefix_name": " AI",
     "tagline": "Protection intelligente des cultures",
     "description": "Détection IA des ravageurs agricoles au Cameroun"
   },
@@ -114,13 +115,6 @@
     "share": "Partager",
     "download": "Télécharger"
   },
-  "status": {
-    "loading": "Chargement...",
-    "processing": "Traitement en cours...",
-    "success": "Succès",
-    "error": "Erreur",
-    "completed": "Terminé"
-  },
   "offline": {
     "title": "Mode hors ligne",
     "description": "Vous êtes actuellement hors ligne. Certaines fonctionnalités peuvent être limitées.",
@@ -158,12 +152,6 @@
     "grams": "g",
     "kg": "kg"
   },
-  "time": {
-    "morning": "Tôt le matin",
-    "evening": "Le soir",
-    "daily": "Quotidiennement",
-    "weekly": "Hebdomadairement"
-  },
   "rgpd": {
     "consent": {
       "text1": "Nous utilisons des cookies pour améliorer votre expérience utilisateur. En continuant à naviguer, vous acceptez notre",
@@ -187,5 +175,115 @@
         "text": "Pour toute question, veuillez nous contacter à"
       }
     }
+  },
+  "nav": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "dashboard": "Tableau de bord",
+    "community": "Communauté",
+    "analyzePlant": "Analyser une plante",
+    "openMainMenu": "Ouvrir le menu principal"
+  },
+  "auth": {
+    "login": "Connexion",
+    "register": "Inscription",
+    "logout": "Déconnexion"
+  },
+  "user": {
+    "profile": "Votre profil",
+    "settings": "Paramètres",
+    "logout": "Déconnexion",
+    "openMenu": "Ouvrir le menu utilisateur"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "viewAll": "Voir toutes les notifications",
+    "noNotifications": "Aucune notification",
+    "markAsRead": "Marquer comme lu",
+    "newAlert": "Nouvelle alerte",
+    "systemUpdate": "Mise à jour système"
+  },
+  "company": {
+    "name": "AgriGuard",
+    "tagline": "Protection intelligente pour vos cultures",
+    "description": "Votre assistant intelligent pour la protection des cultures"
+  },
+  "actions": {
+    "analyze": "Analyser",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "view": "Voir",
+    "download": "Télécharger",
+    "upload": "Téléverser",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "export": "Exporter",
+    "import": "Importer",
+    "refresh": "Actualiser"
+  },
+  "status": {
+    "online": "En ligne",
+    "offline": "Hors ligne",
+    "connecting": "Connexion...",
+    "connected": "Connecté",
+    "disconnected": "Déconnecté",
+    "warning": "Attention",
+    "info": "Information",
+    "loading": "Chargement...",
+    "processing": "Traitement en cours...",
+    "success": "Succès",
+    "error": "Erreur",
+    "completed": "Terminé"
+  },
+  "accessibility": {
+    "closeMenu": "Fermer le menu",
+    "openDropdown": "Ouvrir le menu déroulant",
+    "toggleNavigation": "Basculer la navigation",
+    "skipToContent": "Aller au contenu principal",
+    "userAvatar": "Avatar utilisateur",
+    "logo": "Logo de l'entreprise"
+  },
+  "time": {
+    "now": "Maintenant",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "thisWeek": "Cette semaine",
+    "lastWeek": "La semaine dernière",
+    "thisMonth": "Ce mois-ci",
+    "lastMonth": "Le mois dernier",
+    "minute": "minute",
+    "minutes": "minutes",
+    "hour": "heure",
+    "hours": "heures",
+    "day": "jour",
+    "days": "jours",
+    "week": "semaine",
+    "weeks": "semaines",
+    "month": "mois",
+    "months": "mois",
+    "year": "année",
+    "years": "années",
+    "ago": "il y a",
+    "morning": "Tôt le matin",
+    "evening": "Le soir",
+    "daily": "Quotidiennement",
+    "weekly": "Hebdomadairement"
+  },
+  "stats": {
+    "agricultural_losses": "Pertes agricoles mondiales annuelles (FAO)",
+    "cocoa_families": "Familles dépendant du cacao au Cameroun",
+    "corn_weevil_losses": "FCFA de pertes annuelles par charançon du maïs"
+  },
+  "hero": {
+    "title_part1": "Protégez vos cultures avec",
+    "title_part2": "l'intelligence artificielle",
+    "description": "Au Cameroun, 600 000 familles dépendent du cacao, mais jusqu'à 40% des récoltes sont perdues à cause des ravageurs. Notre solution protège vos cultures et vos revenus.",
+    "demo_button": "Voir la démo",
+    "download_button": "Télécharger l'app",
+    "image_alt": "Agriculture moderne avec intelligence artificielle"
   }
 }
