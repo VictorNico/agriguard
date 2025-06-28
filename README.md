@@ -144,18 +144,18 @@ open http://localhost:3000/api/health
 ## 🎯 CHECKLIST MVP PRÉ-HACKATHON
 
 ### ✅ Fonctionnalités de base
-- [ ] Interface upload/caméra
-- [ ] Affichage résultats
-- [ ] Design responsive
+- [x] Interface upload/caméra
+- [x] Affichage résultats
+- [x] Design responsive
 - [ ] Données de test
-- [ ] API endpoints fonctionnels
+- [x] API endpoints fonctionnels
 
 ### ✅ Optimisations
-- [ ] Chargement rapide
-- [ ] Gestion erreurs
+- [x] Chargement rapide
+- [x] Gestion erreurs
 - [ ] Feedback utilisateur
-- [ ] Mobile-friendly
-- [ ] Offline fallback
+- [x] Mobile-friendly
+- [x] Offline fallback
 
 ### ✅ Demo Ready
 - [ ] Images de test préparées
@@ -163,11 +163,10 @@ open http://localhost:3000/api/health
 - [ ] Données réalistes
 - [ ] Performance fluide
 
-**Résultat : UX complète en 4-6 heures, vous pouvez vous concentrer sur la data et l'IA pendant le hackathon !**
 
 ### Note
 
-- If you do not have node or npm installed to your machine, download and install the runtime from [node](https://nodejs.org/en/download/package-manager)
+- If you do not have node 24.x or npm installed to your machine, download and install the runtime from [node](https://nodejs.org/en/download/package-manager)
 ---
 # Contribuer
 
@@ -176,6 +175,11 @@ open http://localhost:3000/api/health
 - **Nom des branches**
     - Utilisez le format : `<numéro_issue>-<issue>`
 
+- **Changements local**
+    - `git status`
+      - en rouge, les changement non ajoutés
+      - en vert, ceux déjà ajoutés en attente d'acceptation
+  
 - **Commits**
     - ajouter vos changements locaux dans le git files, 
       - `git add filename_name1 filename_name2` ou
