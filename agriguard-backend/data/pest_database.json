@@ -1,0 +1,53 @@
+{
+  "legionnaire_automne": {
+    "name": "Légionnaire d'automne",
+    "description": "Chenille destructrice qui attaque le maïs, sorgho et autres graminées",
+    "crops": ["maïs", "sorgho", "mil"],
+    "urgency": "high",
+    "treatment": [
+      {
+        "type": "chimique",
+        "product": "Cypermethrine 10% EC",
+        "dosage": "50ml pour 15L d'eau",
+        "timing": "Tôt le matin ou le soir"
+      },
+      {
+        "type": "biologique",
+        "product": "Bt (Bacillus thuringiensis)",
+        "dosage": "2g pour 1L d'eau",
+        "timing": "Répéter tous les 7 jours"
+      }
+    ],
+    "prevention": "Rotation des cultures, destruction des résidus"
+  },
+  "bruche_niebe": {
+    "name": "Bruche du niébé",
+    "description": "Coléoptère qui attaque les graines de légumineuses",
+    "crops": ["niébé", "haricot", "arachide"],
+    "urgency": "medium",
+    "treatment": [
+      {
+        "type": "stockage",
+        "product": "Sable fin ou cendres",
+        "dosage": "Mélanger avec les graines",
+        "timing": "Avant stockage"
+      }
+    ],
+    "prevention": "Séchage complet, contenants hermétiques"
+  },
+  "cochenille_manioc": {
+    "name": "Cochenille du manioc",
+    "description": "Insecte suceur qui affaiblit les plants de manioc",
+    "crops": ["manioc"],
+    "urgency": "high",
+    "treatment": [
+      {
+        "type": "biologique",
+        "product": "Savon noir",
+        "dosage": "50ml pour 1L d'eau",
+        "timing": "Pulvériser 2 fois par semaine"
+      }
+    ],
+    "prevention": "Variétés résistantes, espacement adequate"
+  }
+}
