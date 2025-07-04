@@ -7,7 +7,7 @@
         :aria-expanded="false"
         @click="$emit('toggle')"
     >
-      <span class="sr-only">{{ $t('nav.openMainMenu') || 'Ouvrir le menu principal' }}</span>
+      <span class="sr-only">{{ $t('nav.openMainMenu') }}</span>
       <i class="fas fa-bars h-6 w-6"></i>
     </button>
   </div>

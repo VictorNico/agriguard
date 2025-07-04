@@ -7,7 +7,7 @@ export const useLocaleStore = defineStore('locale', {
         language: 'fr' // langue par défaut
     }),
     actions: {
-        setLanguage(lang: string) {
+        setLanguage(lang) {
             this.language = lang
         }
     },

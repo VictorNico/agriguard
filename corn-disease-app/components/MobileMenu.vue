@@ -50,16 +50,16 @@ const props = defineProps({
 const { t } = useI18n()
 
 const menuItems = [
-  { href: '/', label: t('nav.home') || 'Accueil' },
-  { href: '#features', label: t('nav.features') || 'Fonctionnalités' },
-  { href: '#dashboard', label: t('nav.dashboard') || 'Tableau de bord' },
-  { href: '#community', label: t('nav.community') || 'Communauté' }
+  { href: '/', label: t('nav.home')},
+  { href: '#features', label: t('nav.features')},
+  { href: '#dashboard', label: t('nav.dashboard')},
+  { href: '#community', label: t('nav.community') }
 ]
 
 const getMobileLinkClasses = (href) => {
   const isActive = props.currentRoute === href
   return isActive
-      ? 'bg-primary text-white'
+      ? 'bg-green-700 text-white'
       : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
 }
 </script>

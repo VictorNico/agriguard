@@ -9,7 +9,7 @@
         </div>
 
         <!-- Actions desktop -->
-        <div class="hidden md:ml-2 md:flex md:items-center">
+        <div class="hidden lg:ml-2 lg:flex lg:items-center">
           <AuthButtons v-if="!isLoggedIn" />
           <UserActions v-else :user="user" />
           <AnalyzeButton />
@@ -62,3 +62,10 @@ const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
 }
 </script>
+
+<!--<style scoped>-->
+<!--//* {-->
+<!--//  outline: 1px solid red;-->
+<!--//}-->
+
+<!--</style>-->

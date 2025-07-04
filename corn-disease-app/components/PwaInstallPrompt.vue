@@ -105,7 +105,7 @@
 
 <template>
   <div
-      v-if="showInstallPrompt"
+      v-if="store.showPrompt"
       class="fixed bottom-4 left-4 right-4 bg-white rounded-lg shadow-lg border p-4 z-50 animate-slide-up"
   >
     <div class="flex items-start space-x-3">
@@ -142,8 +142,9 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useInstallPromptStore } from '~/stores/pwa'
 
-const showInstallPrompt = ref(false)
+const store = useInstallPromptStore()
 let deferredPrompt = null
 
 onMounted(() => {
@@ -151,19 +152,17 @@ onMounted(() => {
     e.preventDefault()
     deferredPrompt = e
 
-    // Vérifier si déjà installé ou prompt déjà rejeté
-    const dismissed = localStorage.getItem('pwa-install-dismissed')
     const isInstalled = window.matchMedia('(display-mode: standalone)').matches
 
-    if (!dismissed && !isInstalled) {
+    if (!store.dismissed && !isInstalled) {
       setTimeout(() => {
-        showInstallPrompt.value = true
-      }, 5000) // Attendre 5 secondes
+        store.show()
+      }, 5000)
     }
   })
 
   window.addEventListener('appinstalled', () => {
-    showInstallPrompt.value = false
+    store.hide()
     deferredPrompt = null
   })
 })
@@ -172,21 +171,19 @@ const install = async () => {
   if (deferredPrompt) {
     deferredPrompt.prompt()
     const { outcome } = await deferredPrompt.userChoice
-
     if (outcome === 'accepted') {
       console.log('PWA installée')
     }
-
     deferredPrompt = null
   }
-  showInstallPrompt.value = false
+  store.hide()
 }
 
 const dismiss = () => {
-  showInstallPrompt.value = false
-  localStorage.setItem('pwa-install-dismissed', 'true')
+  store.dismiss()
 }
 </script>
+
 
 <style scoped>
 @keyframes slide-up {

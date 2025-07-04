@@ -1,6 +1,7 @@
-// ~/stores/settings.ts
+
 import { defineStore } from 'pinia';
 import { jwtDecode } from "jwt-decode";
+import {capacitorStorage} from "~/plugins/persist-storage.js";
 
 export const useAuthStore = defineStore('auth', {
     state: () => ({
@@ -48,5 +49,8 @@ export const useAuthStore = defineStore('auth', {
             }
         },
     },
-    persist: true,
+    persist: {
+        storage: capacitorStorage,
+        paths: ['user','isAuthenticated','token'] // facultatif ici, mais utile si tu as d'autres props
+    }
 });
