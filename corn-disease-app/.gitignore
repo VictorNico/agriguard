@@ -1,0 +1,90 @@
+# === Nuxt 3 ===
+.nuxt
+.output
+dist
+*.log
+*.local
+*.env.local
+*.env.*.local
+*.env*
+# Nitro server output
+.server
+
+# Static cache
+.cache
+
+# === Node ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# === Capacitor Android ===
+android/.gradle/
+android/app/build/
+android/build/
+android/.idea/
+android/local.properties
+android/.DS_Store
+android/capacitor-cordova-android-plugins/
+android/gradle.properties
+android/.cxx/
+
+# === Capacitor iOS ===
+ios/App/App.xcworkspace/
+ios/App/Pods/
+ios/App/Podfile.lock
+ios/App/build/
+ios/App/DerivedData/
+ios/App/.DS_Store
+ios/App/.idea/
+ios/App/xcuserdata/
+ios/App/Capacitor/Plugins/*/*.swift
+
+# Capacitor web build output
+public/build/
+www/
+
+# === VSCode ===
+.vscode/
+.history/
+
+# === macOS ===
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# === TensorFlow.js temp files (if any)
+__pycache__/
+*.py[cod]
+*.h5
+*.weights.bin
+*.json
+tfjs_model/    # si tu exportes tes modèles ici
+tf_models/
+
+# === Test & Coverage ===
+coverage/
+*.lcov
+
+# === Others ===
+.env
+.env.*
+*.tgz
+*.zip
+*.tar
+.idea/
+*.iml
+.sourcemaps/
+sourcemaps/
+
+# === Logs ===
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+!.env.example
