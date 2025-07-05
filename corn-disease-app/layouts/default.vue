@@ -8,7 +8,7 @@
     <main >
       <slot />
     </main>
-
+    <FooterSection />
     <PwaInstallPrompt />
   </div>
 </template>

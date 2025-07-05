@@ -4,6 +4,7 @@ import '@tensorflow/tfjs-backend-webgl'
 import '@tensorflow/tfjs-backend-cpu'
 
 export default defineNuxtPlugin(async () => {
+
     console.log('Initialisation TensorFlow.js...')
 
     try {

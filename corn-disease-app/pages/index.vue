@@ -5,6 +5,21 @@
 
     <!-- Section héro -->
     <HeroSection />
+
+    <!-- Section detection -->
+    <DiseaseDetectionSection />
+
+    <!-- Community Ecosystem -->
+    <CommunityEcosystem />
+
+    <!-- Blog Section -->
+<!--    <BlogSection />-->
+
+    <!-- Forum Section -->
+<!--    <ForumSection />-->
+
+    <!-- Faq Section -->
+    <FaqSection />
   </div>
 </template>
 

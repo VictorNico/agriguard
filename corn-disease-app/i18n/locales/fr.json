@@ -6,9 +6,10 @@
   "export": "Exporter",
   "app": {
     "main_name": "AgriGuard",
+    "name": "AgriGuard IA",
     "prefix_name": " AI",
     "tagline": "Protection intelligente des cultures",
-    "description": "Détection IA des ravageurs agricoles au Cameroun"
+    "description": "Classification intelligente des maladies des cultures par intelligence artificielle"
   },
   "navigation": {
     "home": "Accueil",
@@ -18,8 +19,11 @@
     "settings": "Paramètres"
   },
   "home": {
-    "title": "Détectez les ravageurs instantanément",
-    "subtitle": "Prenez une photo de vos cultures pour identifier les menaces",
+    "title": "Analysez vos cultures instantanément",
+    "subtitle": "Prenez une photo ou téléchargez une image pour identifier les maladies de vos plantes",
+    "single_mode": "Mode simple",
+    "batch_mode": "Mode lot",
+    "images_selected": "{count} image(s) sélectionnée(s)",
     "cta": {
       "takePicture": "Prendre une photo",
       "selectFromGallery": "ou sélectionner depuis la galerie",
@@ -30,7 +34,9 @@
     "uploadArea": {
       "title": "Prendre une photo",
       "subtitle": "ou sélectionner depuis la galerie",
-      "dragDrop": "Glissez-déposez une image ici"
+      "dragDrop": "Glissez-déposez une image ici",
+      "batch_title": "Sélectionnez plusieurs images",
+      "batch_subtitle": "Téléchargez jusqu'à 10 images pour une analyse en lot"
     }
   },
   "camera": {
@@ -45,48 +51,71 @@
     "use": "Utiliser cette photo"
   },
   "image": {
-    "selected": "Image sélectionnée",
-    "clear": "Supprimer l'image",
-    "analyzing": "Analyse en cours...",
     "analyzeButton": "🔍 Analyser l'image",
-    "chooseAnother": "📁 Choisir une autre image"
+    "chooseAnother": "📁 Choisir une autre image",
+    "choose": "Choisir une image",
+    "choose_images": "Choisir des images",
+    "analyze": "Analyser l'image",
+    "analyze_batch": "Analyser {count} image(s)",
+    "take_photo": "Prendre une photo",
+    "clear": "Supprimer",
+    "clear_all": "Tout supprimer",
+    "add_more": "Ajouter plus d'images",
+    "analyzing": "Analyse en cours...",
+    "selected": "Image sélectionnée",
+    "placeholder": "Aucune image sélectionnée"
   },
   "results": {
     "title": "Résultats de l'analyse",
-    "analyzing": "Analyse en cours...",
-    "noPests": {
-      "title": "Aucun ravageur détecté",
-      "description": "Vos cultures semblent en bonne santé !",
-      "icon": "✅"
-    },
     "confidence": "Confiance",
+    "description": "Description",
+    "scientific_name": "Nom scientifique",
+    "impact": "Impact",
+    "symptoms": "Symptômes",
+    "crops_affected": "Cultures affectées",
+    "top_predictions": "Top 5 des prédictions",
     "treatments": "Traitements recommandés",
-    "treatmentDetails": {
-      "product": "Produit",
-      "dosage": "Dosage",
-      "application": "Application",
-      "timing": "Moment d'application"
+    "prevention": "Mesures de prévention",
+    "severity": {
+      "very_high": "Très élevée",
+      "high": "Élevée",
+      "medium": "Modérée",
+      "low": "Faible",
+      "very_low": "Très faible"
     },
     "urgency": {
-      "high": "Urgent",
-      "medium": "Modéré",
-      "low": "Faible"
-    },
-    "severity": {
+      "critical": "Critique",
       "high": "Élevée",
       "medium": "Modérée",
       "low": "Faible"
     },
+    "status": {
+      "success": "Réussi",
+      "error": "Erreur"
+    },
+    "batch": {
+      "summary": "{successful} sur {total} images analysées avec succès"
+    },
     "treatment": {
       "recommended": "Traitements recommandés",
       "type": {
+        "chemical": "Chimique",
+        "biological": "Biologique",
+        "cultural": "Cultural",
+        "organic": "Organique",
+        "integrated": "Intégré",
         "chimique": "Chimique",
         "biologique": "Biologique",
         "naturel": "Naturel",
         "stockage": "Stockage",
         "preventif": "Préventif",
         "curatif": "Curatif"
-      }
+      },
+      "dosage": "Dosage",
+      "application": "Mode d'application",
+      "timing": "Moment d'application",
+      "frequency": "Fréquence",
+      "precautions": "Précautions"
     }
   },
   "pests": {
@@ -123,15 +152,18 @@
   },
   "errors": {
     "generic": "Une erreur s'est produite",
-    "network": "Erreur de connexion réseau",
     "upload": "Erreur lors de l'envoi de l'image",
     "camera": "Impossible d'accéder à la caméra",
-    "file": "Format de fichier non supporté",
-    "analysis": "Erreur lors de l'analyse",
-    "server": "Erreur serveur",
     "timeout": "Délai d'attente dépassé",
-    "retry": "Réessayer",
-    "tryAgain": "Veuillez réessayer"
+    "tryAgain": "Veuillez réessayer",
+    "analysis": "Erreur lors de l'analyse de l'image",
+    "network": "Problème de connexion réseau",
+    "server": "Erreur du serveur",
+    "file": "Format de fichier non supporté",
+    "classification": "Erreur de classification",
+    "too_many_files": "Trop de fichiers sélectionnés (maximum 10)",
+    "invalid_files": "Certains fichiers ne sont pas des images valides",
+    "retry": "Réessayer l'analyse"
   },
   "install": {
     "title": "Installer AgriGuard AI",
@@ -179,6 +211,11 @@
   "nav": {
     "home": "Accueil",
     "features": "Fonctionnalités",
+    "marketPlace": "Marketplace",
+    "forum": "Forum",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "aboutUs": "À propos",
     "dashboard": "Tableau de bord",
     "community": "Communauté",
     "analyzePlant": "Analyser une plante",
@@ -274,7 +311,7 @@
     "weekly": "Hebdomadairement"
   },
   "stats": {
-    "agricultural_losses": "Pertes agricoles mondiales annuelles (FAO)",
+    "agricultural_losses": "Pertes du Produit Interieur Brute (PIB) agricoles mondiales annuelles",
     "cocoa_families": "Familles dépendant du cacao au Cameroun",
     "corn_weevil_losses": "FCFA de pertes annuelles par charançon du maïs"
   },
@@ -285,5 +322,386 @@
     "demo_button": "Voir la démo",
     "download_button": "Télécharger l'app",
     "image_alt": "Agriculture moderne avec intelligence artificielle"
+  },
+  "diseaseDetection": {
+    "subtitle": "Détection des maladies",
+    "title": "Identifiez les problèmes avant qu'ils ne se propagent",
+    "description": "Notre IA analyse les photos de vos plantes et détecte plus de 200 maladies et parasites avec une précision de 98%.",
+    "features": {
+      "instant_analysis": {
+        "title": "Analyse instantanée",
+        "description": "Prenez une photo d'une feuille suspecte et obtenez un diagnostic en quelques secondes avec des recommandations de traitement."
+      },
+      "historical_tracking": {
+        "title": "Suivi historique",
+        "description": "Consultez l'historique des analyses par parcelle pour identifier les problèmes récurrents et les tendances saisonnières."
+      },
+      "early_alerts": {
+        "title": "Alertes précoces",
+        "description": "Recevez des notifications lorsque des maladies similaires sont détectées dans votre région par d'autres agriculteurs."
+      }
+    }
+  },
+  "community": {
+    "title": "Écosystème communautaire",
+    "subtitle": "Connectez-vous avec d'autres agriculteurs",
+    "description": "Partagez des conseils, recevez des alertes locales et trouvez des mentors pour améliorer vos pratiques.",
+
+    "alerts": {
+      "title": "Alertes communautaires",
+      "description": "Soyez informé des problèmes détectés près de chez vous",
+      "addButton": "Ajouter une alerte",
+      "messages": {
+        "aphids": "Pucerons détectés sur mes plants de blé à 5km d'ici",
+        "mildew": "Premiers signes de mildiou dans ma parcelle Nord"
+      },
+      "times": {
+        "twoHours": "Il y a 2 heures",
+        "today": "Aujourd'hui, 09:24"
+      }
+    },
+
+    "forum": {
+      "title": "Forum agricole",
+      "description": "Discussions géolocalisées et partage d'expériences",
+      "browseButton": "Parcourir les discussions",
+      "topics": {
+        "bioTreatment": "Traitement bio contre les pucerons",
+        "cornSowing": "Meilleure période pour semer le maïs",
+        "newPest": "Nouveau ravageur dans la région"
+      },
+      "replies": {
+        "twelve": "12 réponses",
+        "twentyFour": "24 réponses",
+        "seven": "7 réponses"
+      },
+      "distances": {
+        "threeKm": "3 km de vous",
+        "eightKm": "8 km de vous",
+        "fiveKm": "5 km de vous"
+      }
+    },
+
+    "mentoring": {
+      "title": "Mentorat",
+      "description": "Connectez-vous avec des agriculteurs expérimentés",
+      "findButton": "Trouver un mentor",
+      "experiences": {
+        "twentyFive": "25 ans d'expérience",
+        "fifteen": "15 ans d'expérience"
+      },
+      "specialties": {
+        "organic": "Spécialiste en agriculture biologique",
+        "pestManagement": "Expert en gestion des ravageurs"
+      },
+      "reviews": {
+        "thirtyTwo": "32 avis",
+        "twentyEight": "28 avis"
+      }
+    },
+
+    "marketplace": {
+      "title": "Marketplace",
+      "description": "Achetez et vendez des produits et équipements agricoles localement",
+      "buyButton": "Acheter",
+      "distances": {
+        "eightKm": "à 8km",
+        "fifteenKm": "à 15km",
+        "fiveKm": "à 5km"
+      },
+      "products": {
+        "bioFungicide": {
+          "name": "Fongicide bio",
+          "details": "5L • Neuf"
+        },
+        "sprayer": {
+          "name": "Pulvérisateur",
+          "details": "500L • Occasion"
+        },
+        "seeds": {
+          "name": "Semences résistantes",
+          "details": "Blé • 25kg"
+        }
+      },
+      "addProduct": {
+        "title": "Ajouter un produit",
+        "description": "Vendez vos équipements ou produits inutilisés",
+        "button": "Ajouter"
+      }
+    }
+  },
+  "aboutUs": {
+    "pageTitle": "À Propos de Nous",
+    "pageSubtitle": "Découvrez notre histoire, notre mission et notre engagement pour l'innovation agricole en Afrique",
+    "ourStory": "Notre Histoire",
+    "story1": "Fondée en 2020 par une équipe d'agronomes passionnés et d'experts en technologie, notre entreprise est née d'un constat simple : les agriculteurs africains avaient besoin d'outils accessibles et fiables pour protéger leurs cultures.",
+    "story2": "À travers des années de recherche et développement, nous avons créé une plateforme innovante qui combine intelligence artificielle, vision par ordinateur et expertise agricole pour fournir des diagnostics précis et instantanés.",
+    "story3": "Aujourd'hui, nous sommes fiers d'accompagner des milliers d'agriculteurs à travers l'Afrique, les aidant à augmenter leurs rendements et à sécuriser leurs moyens de subsistance.",
+    "innovationTitle": "Innovation",
+    "innovationDesc": "La technologie de pointe au service de l'agriculture",
+    "mission": "Mission",
+    "missionFull": "Démocratiser l'accès à l'expertise agricole grâce à des solutions technologiques innovantes et accessibles, permettant à chaque agriculteur d'optimiser sa production et de protéger ses cultures.",
+    "vision": "Vision",
+    "visionFull": "Devenir la plateforme de référence pour le diagnostic agricole en Afrique, contribuant à la sécurité alimentaire et au développement durable du continent.",
+    "values": "Valeurs",
+    "valuesFull": "L'innovation, l'accessibilité, la durabilité et l'engagement envers les agriculteurs africains guident toutes nos actions et décisions.",
+    "impact": "Notre Impact",
+    "farmers": "Agriculteurs Accompagnés",
+    "accuracy": "Précision des Diagnostics",
+    "diagnoses": "Diagnostics Réalisés",
+    "regions": "Régions Couvertes",
+    "meetTeam": "Rencontrez Notre Équipe",
+    "partners": "Nos Partenaires",
+    "partner1": "AgriTech Africa",
+    "partner2": "Green Innovation",
+    "partner3": "FarmConnect",
+    "partner4": "TechForGood",
+    "metaTitle": "À Propos de Nous - Innovation Agricole pour l'Afrique",
+    "metaDescription": "Découvrez notre histoire, notre mission et notre engagement pour l'innovation agricole en Afrique. Apprenez comment nous aidons les agriculteurs à optimiser leur production.",
+    "team": {
+      "member1": {
+        "name": "Dr. Jean Kamau",
+        "role": "PDG & Co-Fondateur",
+        "bio": "Ingénieur agronome avec 15 ans d'expérience dans l'agriculture durable et l'innovation technologique agricole en Afrique."
+      },
+      "member2": {
+        "name": "Amina Mbeki",
+        "role": "CTO & Co-Fondatrice",
+        "bio": "Experte en informatique spécialisée dans l'intelligence artificielle et l'apprentissage automatique appliqués à l'agriculture."
+      },
+      "member3": {
+        "name": "Dr. Fatou Kone",
+        "role": "Responsable Recherche",
+        "bio": "Docteure en Pathologie Végétale, dirige notre équipe de recherche dans le développement d'algorithmes de diagnostic des maladies des cultures."
+      },
+      "member4": {
+        "name": "Samuel Mwangi",
+        "role": "Responsable des Opérations",
+        "bio": "Expert en opérations avec une vaste expérience dans le déploiement de solutions technologiques à travers l'Afrique."
+      },
+      "member5": {
+        "name": "Dr. Rachel Nkomo",
+        "role": "Conseillère Agricole",
+        "bio": "Agronome avec 20 ans d'expérience de terrain, s'assure que nos solutions répondent aux vrais besoins des agriculteurs."
+      },
+      "member6": {
+        "name": "Léa Moussa",
+        "role": "Responsable Marketing",
+        "bio": "Experte en marketing et communication passionnée par la promotion de l'innovation agricole en Afrique."
+      }
+    }
+  },
+  "blog": {
+    "pageTitle": "Blog",
+    "pageSubtitle": "Découvrez nos derniers articles sur les maladies des plantes, la prévention et l'innovation agricole",
+    "searchPlaceholder": "Rechercher des articles...",
+    "categories": {
+      "all": "Toutes les Catégories",
+      "diseases": "Maladies",
+      "prevention": "Prévention",
+      "treatment": "Traitement",
+      "farming": "Agriculture",
+      "research": "Recherche",
+      "technology": "Technologie"
+    },
+    "featured": "À la Une",
+    "readTime": "{minutes} min de lecture",
+    "readMore": "Lire Plus",
+    "featuredImage": "Article Vedette",
+    "noResults": "Aucun article trouvé",
+    "tryDifferentSearch": "Essayez d'ajuster vos termes de recherche ou filtres",
+    "loadMore": "Charger Plus d'Articles",
+    "newsletter": {
+      "title": "Restez Informé",
+      "description": "Abonnez-vous à notre newsletter pour recevoir les derniers articles et actualités sur l'innovation agricole",
+      "placeholder": "Entrez votre adresse email",
+      "subscribe": "S'abonner"
+    },
+    "metaTitle": "Blog - Innovation Agricole et Prévention des Maladies des Plantes",
+    "metaDescription": "Découvrez nos derniers articles sur les maladies des plantes, les techniques de prévention et les innovations agricoles pour aider les agriculteurs africains à optimiser leur production.",
+    "articles": {
+      "article1": {
+        "title": "Maladies Courantes du Maïs en Tanzanie : Identification et Prévention",
+        "excerpt": "Apprenez à identifier et prévenir les maladies du maïs les plus courantes affectant les cultures en Tanzanie. Un guide complet pour les agriculteurs locaux avec des stratégies pratiques de prévention."
+      },
+      "article2": {
+        "title": "Techniques de Détection Précoce des Maladies des Cultures",
+        "excerpt": "Découvrez les techniques modernes de détection précoce des maladies des plantes en utilisant l'inspection visuelle et les outils numériques pour protéger vos cultures avant qu'il ne soit trop tard."
+      },
+      "article3": {
+        "title": "Méthodes de Traitement Durables pour les Maladies des Plantes",
+        "excerpt": "Explorez les méthodes de traitement respectueuses de l'environnement et économiquement viables pour les maladies des plantes, en se concentrant sur les approches biologiques et durables."
+      },
+      "article4": {
+        "title": "Meilleures Pratiques Agricoles pour la Prévention des Maladies",
+        "excerpt": "Apprenez les pratiques agricoles fondamentales qui peuvent considérablement réduire le risque de maladies des plantes dans vos cultures grâce à des techniques de culture appropriées."
+      },
+      "article5": {
+        "title": "Technologie IA dans la Détection des Maladies du Maïs",
+        "excerpt": "Découvrez comment l'intelligence artificielle révolutionne la détection des maladies des plantes, rendant le diagnostic plus rapide et plus précis pour les agriculteurs du monde entier."
+      },
+      "article6": {
+        "title": "Impact du Changement Climatique sur les Schémas de Maladies des Plantes",
+        "excerpt": "Analyse de recherche sur la façon dont le changement climatique affecte les schémas de maladies des plantes et ce que les agriculteurs peuvent faire pour adapter leurs pratiques en conséquence."
+      }
+    }
+  },
+  "faq": {
+    "pageTitle": "Questions Fréquentes",
+    "pageSubtitle": "Trouvez rapidement les réponses aux questions les plus courantes sur le diagnostic des maladies des plantes",
+    "metaTitle": "FAQ - Questions Fréquentes | Diagnostic des Maladies des Plantes",
+    "metaDescription": "Découvrez les réponses aux questions fréquentes sur le diagnostic, le traitement et la prévention des maladies des plantes.",
+    "searchPlaceholder": "Rechercher dans les questions...",
+    "noResults": "Aucun résultat trouvé",
+    "tryDifferentSearch": "Essayez avec des mots-clés différents",
+    "stillHaveQuestions": "Vous avez encore des questions ?",
+    "contactDescription": "Notre équipe d'experts est là pour vous aider avec vos questions spécifiques sur les maladies des plantes.",
+    "contactSupport": "Contacter le Support",
+    "joinForum": "Rejoindre le Forum",
+    "categories": {
+      "all": "Toutes",
+      "diagnosis": "Diagnostic",
+      "diseases": "Maladies",
+      "treatment": "Traitement",
+      "prevention": "Prévention",
+      "app": "Application",
+      "technical": "Technique"
+    },
+    "questions": {
+      "q1": {
+        "question": "Comment diagnostiquer une maladie des plantes avec l'application ?",
+        "answer": "Il vous suffit de prendre une photo claire de la plante malade en vous assurant que les symptômes sont bien visibles. Notre IA analysera l'image et vous fournira un diagnostic précis avec des recommandations de traitement adaptées."
+      },
+      "q2": {
+        "question": "Quelle est la précision du diagnostic automatique ?",
+        "answer": "Notre système d'intelligence artificielle atteint une précision de plus de 95% sur les maladies les plus communes. Il est entraîné sur une base de données de plus de 100 000 images de plantes malades validées par des experts phytopathologistes."
+      },
+      "q3": {
+        "question": "Quelles sont les maladies les plus courantes détectées ?",
+        "answer": "L'application peut détecter plus de 200 maladies différentes incluant les maladies fongiques (mildiou, oïdium, rouille), bactériennes (feu bactérien, taches bactériennes), virales (mosaïque, jaunissement) et les carences nutritionnelles."
+      },
+      "q4": {
+        "question": "Comment différencier une maladie d'une carence nutritionnelle ?",
+        "answer": "Les maladies présentent souvent des symptômes localisés avec des formes spécifiques (taches, auréoles, sporulation), tandis que les carences affectent généralement la plante de manière plus uniforme avec des changements de couleur caractéristiques (jaunissement, brunissement)."
+      },
+      "q5": {
+        "question": "Quels traitements sont recommandés pour les maladies fongiques ?",
+        "answer": "Les traitements varient selon la maladie : fongicides préventifs (bouillie bordelaise, soufre), traitements curatifs (triazoles, strobilurines), et méthodes biologiques (Bacillus subtilis, extraits de plantes). Il est important de respecter les doses et délais d'application."
+      },
+      "q6": {
+        "question": "Comment prévenir les maladies des plantes ?",
+        "answer": "La prévention repose sur plusieurs piliers : rotation des cultures, choix de variétés résistantes, gestion de l'irrigation, aération des cultures, désinfection des outils, et surveillance régulière. Un environnement sain limite considérablement les risques."
+      },
+      "q7": {
+        "question": "L'application fonctionne-t-elle hors ligne ?",
+        "answer": "Oui, une fois téléchargée, l'application peut fonctionner en mode hors ligne pour les diagnostics de base. Cependant, une connexion internet est nécessaire pour accéder aux dernières mises à jour de la base de données et aux fonctionnalités avancées."
+      },
+      "q8": {
+        "question": "Comment améliorer la qualité de mes photos pour un meilleur diagnostic ?",
+        "answer": "Prenez des photos nettes avec un bon éclairage naturel, cadrez les symptômes de près, évitez les ombres fortes, et prenez plusieurs angles si nécessaire. Une distance de 20-30 cm de la zone affectée est généralement optimale."
+      },
+      "q9": {
+        "question": "Que faire si l'application ne reconnaît pas ma plante ?",
+        "answer": "Vous pouvez soumettre votre cas à nos experts via la fonction 'Demander un avis expert'. Incluez plusieurs photos sous différents angles et décrivez les symptômes observés. Notre équipe vous répondra sous 24-48 heures."
+      },
+      "q10": {
+        "question": "Quand appliquer des traitements préventifs ?",
+        "answer": "Les traitements préventifs sont plus efficaces avant l'apparition des symptômes, généralement au début du printemps ou selon les conditions météorologiques favorables aux maladies (humidité élevée, températures douces). Consultez le calendrier de traitement dans l'application."
+      }
+    }
+  },
+  "forum": {
+    "pageTitle": "Forum Communautaire",
+    "pageSubtitle": "Échangez avec des experts et d'autres agriculteurs sur les maladies des plantes",
+    "metaTitle": "Forum Communautaire | Diagnostic des Maladies des Plantes",
+    "metaDescription": "Rejoignez notre communauté d'experts et d'agriculteurs pour discuter des maladies des plantes, diagnostics et traitements.",
+    "createPost": "Créer un Post",
+    "joinCommunity": "Rejoindre la Communauté",
+    "stats": {
+      "totalPosts": "Posts Total",
+      "activeUsers": "Utilisateurs Actifs",
+      "totalTopics": "Sujets Total",
+      "expertsOnline": "Experts en Ligne"
+    },
+    "categories": {
+      "title": "Catégories",
+      "all": "Toutes",
+      "diseases": "Maladies",
+      "diagnosis": "Diagnostic",
+      "treatment": "Traitement",
+      "prevention": "Prévention",
+      "farming": "Agriculture",
+      "general": "Général"
+    },
+    "onlineUsers": "Utilisateurs en Ligne",
+    "searchPlaceholder": "Rechercher dans le forum...",
+    "sort": {
+      "latest": "Plus récent",
+      "popular": "Plus populaire",
+      "answered": "Répondu",
+      "unanswered": "Non répondu"
+    },
+    "loadMore": "Charger Plus",
+    "postTitle": "Titre du Post",
+    "postTitlePlaceholder": "Saisissez un titre descriptif pour votre post",
+    "category": "Catégorie",
+    "selectCategory": "Sélectionnez une catégorie",
+    "postContent": "Contenu du Post",
+    "postContentPlaceholder": "Décrivez votre problème ou partagez vos connaissances...",
+    "markAsQuestion": "Marquer comme question",
+    "cancel": "Annuler",
+    "publishPost": "Publier le Post",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "daysAgo": "Il y a {days} jours",
+    "posts": {
+      "post1": {
+        "title": "Identification du mildiou sur mes plants de tomates",
+        "excerpt": "Mes plants de tomates présentent des taches jaunâtres sur les feuilles avec un duvet blanchâtre au revers. Est-ce du mildiou ? Comment le traiter efficacement sans nuire aux fruits ?"
+      },
+      "post2": {
+        "title": "Méthodes de diagnostic précoce des maladies fongiques",
+        "excerpt": "Quelles sont les meilleures techniques pour détecter les maladies fongiques avant qu'elles ne se propagent dans toute la culture ? Recherche d'expériences pratiques."
+      },
+      "post3": {
+        "title": "Traitement biologique contre l'oïdium",
+        "excerpt": "Partage d'expérience réussie avec des traitements biologiques à base de bicarbonate de soude et d'huiles essentielles pour lutter contre l'oïdium sur cucurbitacées."
+      },
+      "post4": {
+        "title": "Prévention des maladies en serre",
+        "excerpt": "Conseils pratiques pour maintenir un environnement sain en serre et prévenir l'apparition de maladies. Gestion de l'humidité, aération et désinfection."
+      },
+      "post5": {
+        "title": "Rotation des cultures pour limiter les pathogènes",
+        "excerpt": "Discussion sur les meilleures pratiques de rotation des cultures pour briser le cycle des pathogènes du sol et réduire l'incidence des maladies."
+      }
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "save": "Sauvegarder",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "footer": {"quickLinks": "Liens Rapides",
+    "support": "Support",
+    "helpCenter": "Centre d'aide",
+    "contact": "Contact",
+    "documentation": "Documentation",
+    "privacy": "Confidentialité",
+    "copyright": "Tous droits réservés. {author}.",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique des cookies"
   }
+
+
 }

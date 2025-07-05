@@ -24,7 +24,7 @@
     </div>
 </template>
 <script setup>
-import { useLocaleStore } from '~/stores/locale';
+import { useLocaleStore } from '~/stores/locale/index.js';
 const localeStore = useLocaleStore();
 
 const { locale, t } = useI18n()

@@ -2,7 +2,7 @@
 import Aura from '@primevue/themes/aura';
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   compatibilityDate: '2025-07-04',
   modules: [
     '@nuxtjs/tailwindcss',
@@ -124,6 +124,7 @@ export default defineNuxtConfig({
     },
     build: {
       rollupOptions: {
+        external: ['@tensorflow/tfjs-node'],
         output: {
           manualChunks: {
             'tensorflow': ['@tensorflow/tfjs']
@@ -138,7 +139,12 @@ export default defineNuxtConfig({
       minify: 'terser', // Utilise Terser comme minimiseur
     },
     optimizeDeps: {
-      include: ['@tensorflow/tfjs', 'long', 'seedrandom'],
+      include: [
+        '@tensorflow/tfjs',
+        'long',
+        'seedrandom',
+        '@tensorflow/tfjs-backend-cpu',
+        '@tensorflow/tfjs-backend-webgl'],
     },
     define: {
       global: 'globalThis'
@@ -211,7 +217,27 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
     {
-      path: '~/components/sections',
+      path: '~/components/nav',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/landing',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/network',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/rgpd',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/i18n',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/analyze',
       pathPrefix: false,
     }
   ],
@@ -223,10 +249,10 @@ export default defineNuxtConfig({
   },
 
   // Configuration des plugins
-  // plugins: [
-  //   '~/plugins/capacitor.client.ts',
-  //   '~/plugins/tensorflow.client.ts'
-  // ],
+  plugins: [
+    '~/plugins/capacitor.ts',
+    '~/plugins/tensorflow.ts'
+  ],
 
   experimental: {
     payloadExtraction: false

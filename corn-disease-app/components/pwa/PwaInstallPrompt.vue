@@ -142,7 +142,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useInstallPromptStore } from '~/stores/pwa'
+import { useInstallPromptStore } from '~/stores/pwa/index.js'
 
 const store = useInstallPromptStore()
 let deferredPrompt = null

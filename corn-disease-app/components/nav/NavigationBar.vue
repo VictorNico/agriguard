@@ -1,11 +1,14 @@
 <template>
-  <nav class="bg-white shadow-lg">
+  <nav class="sticky top-0 bg-white shadow-lg">
     <div class="max-w-8xl mx-auto px-4 sm:px-2 lg:px-4">
       <div class="flex justify-between h-16">
         <!-- Logo et menu desktop -->
         <div class="flex items-center">
           <AppLogo />
-          <DesktopNavMenu :current-route="currentRoute" />
+          <DesktopNavMenu
+              :current-route="currentRoute"
+              :is-logged-in="isLoggedIn"
+          />
         </div>
 
         <!-- Actions desktop -->
@@ -27,6 +30,7 @@
         :is-logged-in="isLoggedIn"
         :user="user"
         :current-route="currentRoute"
+        @close="isMobileMenuOpen = false"
     />
   </nav>
 </template>

@@ -38,10 +38,10 @@
       </div>
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <NuxtImg
-          class="h-56 w-full object-cover center sm:h-72 md:h-96 lg:w-200 lg:h-200 mx-1"
+      <img
+          class="h-56 w-full object-center sm:h-72 md:h-96 lg:w-full lg:h-full"
           src="/img2.png"
-          :alt="$t('hero.image_alt')"
+          :alt="t('hero.image_alt')"
           loading="lazy"
       />
     </div>
