@@ -20,3 +20,8 @@ body {
     --splash-accent: #4CAF50;
     --splash-text: #ffffff;
 }
+
+/* global.css ou dans un style global */
+.safe-area {
+    padding-top: env(safe-area-inset-top);
+}

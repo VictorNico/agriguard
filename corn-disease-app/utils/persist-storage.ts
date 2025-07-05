@@ -1,4 +1,4 @@
-// plugins/persist-storage.ts
+// utils/persist-storage.ts
 import { Capacitor } from '@capacitor/core'
 import { Preferences } from '@capacitor/preferences'
 
@@ -30,11 +30,4 @@ export const capacitorStorage = {
     }
 }
 
-// 👇 Plugin Nuxt pour `provide` (optionnel)
-export default defineNuxtPlugin(() => {
-    return {
-        provide: {
-            capacitorStorage
-        }
-    }
-})
+

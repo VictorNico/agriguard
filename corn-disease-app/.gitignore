@@ -88,3 +88,4 @@ pnpm-debug.log*
 yarn-debug.log*
 
 !.env.example
+!package.json

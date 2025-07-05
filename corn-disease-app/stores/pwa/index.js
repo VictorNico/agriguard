@@ -1,6 +1,6 @@
 // stores/installPrompt.ts
 import { defineStore } from 'pinia'
-import { capacitorStorage } from '~/plugins/persist-storage' // utilise ton système hybride
+import { capacitorStorage } from '~/utils/persist-storage.js' // utilise ton système hybride
 
 export const useInstallPromptStore = defineStore('installPrompt', {
     state: () => ({

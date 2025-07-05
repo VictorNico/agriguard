@@ -1,6 +1,6 @@
 <!-- app.vue -->
 <template>
-  <div id="app">
+  <div id="app" class="app-wrapper safe-area">
     <!-- Splash screen pour PWA -->
     <div v-if="showWebSplash" id="web-splash-screen" class="splash-screen">
       <div class="splash-content">
@@ -41,6 +41,7 @@
 
 <script setup>
 import { Capacitor } from '@capacitor/core'
+import { StatusBar, Style } from '@capacitor/status-bar'
 
 const { isShowing, progress, message, loadingSequence } = useSplashScreen()
 
@@ -53,6 +54,10 @@ onMounted(async () => {
     // Pour PWA, gérer le splash screen web
     await loadingSequence()
     showWebSplash.value = false
+  }
+  else{
+    await StatusBar.setOverlaysWebView({ overlay: false }) // <-- La bonne méthode
+    await StatusBar.setStyle({ style: Style.Light }) // optionnel
   }
 })
 
@@ -140,6 +145,11 @@ console.log(isConsentGiven.value);
 </script>
 
 <style scoped>
+/* global.css ou dans un style global */
+.safe-area {
+  padding-top: env(safe-area-inset-top);
+}
+
 .splash-screen {
   position: fixed;
   top: 0;

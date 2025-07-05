@@ -18,9 +18,9 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt'
   ],
-  imports: {
-    autoImport: true
-  },
+  // imports: {
+  //   autoImport: true
+  // },
 
   // Configuration I18n
   i18n: {
@@ -117,6 +117,11 @@ export default defineNuxtConfig({
 
   // Configuration Vite pour optimiser les bundles
   vite: {
+    server: {
+      watch: {
+        usePolling: true  // ✅ Important pour macOS parfois
+      }
+    },
     build: {
       rollupOptions: {
         output: {
@@ -133,7 +138,7 @@ export default defineNuxtConfig({
       minify: 'terser', // Utilise Terser comme minimiseur
     },
     optimizeDeps: {
-      include: ['@tensorflow/tfjs', 'long', 'seedrandom']
+      include: ['@tensorflow/tfjs', 'long', 'seedrandom'],
     },
     define: {
       global: 'globalThis'
@@ -218,10 +223,10 @@ export default defineNuxtConfig({
   },
 
   // Configuration des plugins
-  plugins: [
-    '~/plugins/capacitor.client.ts',
-    '~/plugins/tensorflow.client.ts'
-  ],
+  // plugins: [
+  //   '~/plugins/capacitor.client.ts',
+  //   '~/plugins/tensorflow.client.ts'
+  // ],
 
   experimental: {
     payloadExtraction: false

@@ -1,7 +1,7 @@
 
 import { defineStore } from 'pinia';
 import { jwtDecode } from "jwt-decode";
-import {capacitorStorage} from "~/plugins/persist-storage.js";
+import {capacitorStorage} from "~/utils/persist-storage.ts";
 
 export const useAuthStore = defineStore('auth', {
     state: () => ({
