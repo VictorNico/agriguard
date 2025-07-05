@@ -1,0 +1,181 @@
+{
+  "thysanoptera": {
+    "frankliniella_sp": {
+      "name": "Thrips Frankliniella sp.",
+      "description": "Vecteur principal du virus MCMV (Maize chlorotic mottle virus) responsable de la maladie MLN. Représente 8.24% des insectes identifiés dans l'étude. Insecte de petite taille qui se nourrit en piquant les tissus végétaux.",
+      "crops": ["maïs"],
+      "urgency": "critical",
+      "mln_role": "Vecteur primaire du MCMV - composant essentiel de la MLN",
+      "virus_transmitted": ["MCMV"],
+      "percentage_in_study": "8.24%",
+      "treatment": [
+        {
+          "type": "chimique",
+          "product": "Imidaclopride 70% WS",
+          "dosage": "3-5g pour 1kg de semences",
+          "timing": "Traitement des semences avant semis"
+        },
+        {
+          "type": "chimique",
+          "product": "Spinosad 240 SC",
+          "dosage": "0.5ml pour 1L d'eau",
+          "timing": "Pulvérisation foliaire dès détection"
+        },
+        {
+          "type": "biologique",
+          "product": "Amblyseius swirskii",
+          "dosage": "Lâchers préventifs",
+          "timing": "Maintien d'une population prédatrice"
+        }
+      ],
+      "prevention": "Variétés résistantes MLN, pièges bleus collants, dates de semis synchronisées, élimination des résidus infectés"
+    }
+  },
+  "hemiptera": {
+    "rhopalosiphum_sp": {
+      "name": "Puceron Rhopalosiphum sp.",
+      "description": "Vecteur des potyvirus (SCMV, MDMV) qui causent la MLN en synergie avec MCMV. Représente 4.85% des insectes identifiés. Forme des colonies sur les feuilles et transmet les virus par ses piqûres.",
+      "crops": ["maïs", "sorgho", "graminées"],
+      "urgency": "critical",
+      "mln_role": "Vecteur des potyvirus - composant essentiel de la MLN",
+      "virus_transmitted": ["SCMV", "MDMV"],
+      "percentage_in_study": "4.85%",
+      "treatment": [
+        {
+          "type": "chimique",
+          "product": "Pirimicarbe 50% WG",
+          "dosage": "1g pour 1L d'eau",
+          "timing": "Traitement sélectif anti-pucerons"
+        },
+        {
+          "type": "chimique",
+          "product": "Acetamipride 20% SP",
+          "dosage": "0.5g pour 1L d'eau",
+          "timing": "Dès apparition des premières colonies"
+        },
+        {
+          "type": "biologique",
+          "product": "Aphidius colemani",
+          "dosage": "Lâchers ciblés",
+          "timing": "Lutte biologique préventive"
+        }
+      ],
+      "prevention": "Variétés tolérantes MLN, bandes fleuries pour auxiliaires, éviter les excès d'azote, surveillance des migrations"
+    }
+  },
+  "homoptera": {
+    "myzus_sp": {
+      "name": "Puceron vert Myzus sp.",
+      "description": "Vecteur polyphage des potyvirus associés à la MLN. Représente 5.11% des insectes identifiés. Espèce très mobile capable de transmettre plusieurs virus sur de longues distances.",
+      "crops": ["maïs", "cultures diverses"],
+      "urgency": "high",
+      "mln_role": "Vecteur secondaire des potyvirus",
+      "virus_transmitted": ["SCMV", "potyvirus divers"],
+      "percentage_in_study": "5.11%",
+      "treatment": [
+        {
+          "type": "chimique",
+          "product": "Thiamethoxam 25% WG",
+          "dosage": "0.5g pour 1L d'eau",
+          "timing": "Traitement préventif systémique"
+        },
+        {
+          "type": "biologique",
+          "product": "Aphidius colemani",
+          "dosage": "Lâchers hebdomadaires",
+          "timing": "Dès détection des premières colonies"
+        }
+      ],
+      "prevention": "Paillis réfléchissant, plantes pièges, lutte biologique préventive"
+    },
+    "trialeurodes_sp": {
+      "name": "Aleurode Trialeurodes sp.",
+      "description": "Vecteur potentiel de virus sur maïs. Représente 4.60% des insectes identifiés. Bien que non confirmé comme vecteur direct MLN, peut faciliter la transmission d'autres virus.",
+      "crops": ["maïs", "cultures diverses"],
+      "urgency": "medium",
+      "mln_role": "Vecteur potentiel - rôle non confirmé",
+      "virus_transmitted": ["virus divers"],
+      "percentage_in_study": "4.60%",
+      "treatment": [
+        {
+          "type": "chimique",
+          "product": "Spiromesifen 240 SC",
+          "dosage": "1ml pour 1L d'eau",
+          "timing": "Rotation avec autres modes d'action"
+        },
+        {
+          "type": "biologique",
+          "product": "Encarsia formosa",
+          "dosage": "Lâchers réguliers",
+          "timing": "Prévention et traitement"
+        }
+      ],
+      "prevention": "Pièges jaunes collants, filets anti-insectes, gestion des adventices"
+    },
+    "graminella_sp": {
+      "name": "Cicadelle Graminella sp.",
+      "description": "Cicadelle spécialisée des graminées, vecteur potentiel de phytoplasmes. Représente 4.78% des insectes identifiés. Peut contribuer à la propagation de pathogènes sur maïs.",
+      "crops": ["maïs", "graminées"],
+      "urgency": "low",
+      "mln_role": "Vecteur potentiel - rôle indirect",
+      "virus_transmitted": ["phytoplasmes"],
+      "percentage_in_study": "4.78%",
+      "treatment": [
+        {
+          "type": "chimique",
+          "product": "Flonicamid 50% WG",
+          "dosage": "0.3g pour 1L d'eau",
+          "timing": "Traitement préventif"
+        },
+        {
+          "type": "biologique",
+          "product": "Beauveria bassiana",
+          "dosage": "5g pour 1L d'eau",
+          "timing": "Applications répétées"
+        }
+      ],
+      "prevention": "Gestion des graminées adventices, variétés tolérantes, surveillance"
+    },
+    "tetranychus_sp": {
+      "name": "Tétranyque Tetranychus sp.",
+      "description": "Acarien qui peut faciliter l'infection virale par les blessures qu'il cause. Représente 2.37% des arthropodes identifiés. Non-vecteur direct mais peut prédisposer aux infections.",
+      "crops": ["maïs", "cultures diverses"],
+      "urgency": "low",
+      "mln_role": "Prédisposant aux infections - non-vecteur direct",
+      "virus_transmitted": ["aucun - facilite l'infection"],
+      "percentage_in_study": "2.37%",
+      "treatment": [
+        {
+          "type": "chimique",
+          "product": "Abamectine 1.8% EC",
+          "dosage": "1ml pour 1L d'eau",
+          "timing": "Traitement dès détection"
+        },
+        {
+          "type": "biologique",
+          "product": "Phytoseiulus persimilis",
+          "dosage": "Lâchers préventifs",
+          "timing": "Maintien permanent"
+        }
+      ],
+      "prevention": "Humidité élevée, éviter la poussière, plantes refuges"
+    }
+  },
+  "mln_context": {
+    "disease_overview": {
+      "name": "Nécrose Létale du Maïs (MLN)",
+      "description": "Maladie causée par la co-infection de MCMV et potyvirus (SCMV/MDMV)",
+      "primary_vectors": ["Frankliniella sp.", "Rhopalosiphum sp."],
+      "secondary_vectors": ["Myzus sp."],
+      "symptoms": "Jaunissement, nécrose des feuilles, nanisme, mort des plants",
+      "impact": "Pertes de rendement 20-90% selon les conditions"
+    },
+    "management_priorities": {
+      "vector_control": "Lutte contre thrips (MCMV) et pucerons (potyvirus)",
+      "seed_treatment": "Traitement insecticide des semences",
+      "variety_selection": "Variétés résistantes/tolérantes MLN",
+      "field_sanitation": "Élimination des résidus infectés",
+      "synchronized_planting": "Semis groupés pour briser les cycles"
+    }
+  }
+}

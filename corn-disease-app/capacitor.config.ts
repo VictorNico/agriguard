@@ -7,7 +7,7 @@ const config: CapacitorConfig = {
   webDir: 'dist',
   ...(process.env.NODE_ENV === 'development' ? {
     server: {
-      url: 'http://localhost:3000',
+      url: 'http://192.168.171.160/:3000',
       cleartext: true
     }} : {server: {
       androidScheme: 'https'
