@@ -237,7 +237,7 @@ app.db
 
 # Uploads
 uploads/
-storage
+storage/
 archived
 static/uploads/
 media/
