@@ -256,7 +256,7 @@
     "register_description": "Create your AgroConnect account and join our agricultural community",
     "first_name_placeholder": "Your first name",
     "last_name_placeholder": "Your last name",
-    "email_placeholder": "your@email.com",
+    "email_placeholder": "your{'@'}email.com",
     "password_placeholder": "Your password",
     "confirm_password_placeholder": "Confirm your password",
     "phone_placeholder": "Ex: +237 6XX XXX XXX",

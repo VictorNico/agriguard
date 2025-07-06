@@ -28,7 +28,8 @@
 import {ref} from 'vue'
 
 const {t} = useI18n()
-
+import {useAuthStore} from "~/stores/auth/index.js";
+const authStore = useAuthStore()
 // Meta tags dynamiques
 useSeoMeta({
   title: t('app.name'),
@@ -90,7 +91,8 @@ const analyzeImage = async () => {
     const blob = await response.blob()
     const formData = new FormData()
     formData.append('image', blob, 'image.jpg')
-
+    const textBlob = new Blob([authStore?.state?.user?.user_id || 'unknown'], { type: 'text/plain' });
+    formData.append('user_id',textBlob )
     const apiResponse = await fetch(`${config.public.apiBase}/api/classify`, {
       method: 'POST',
       body: formData
@@ -131,7 +133,8 @@ const analyzeBatch = async () => {
       const blob = await response.blob()
       formData.append('images', blob, `image_${i}.jpg`)
     }
-
+    const textBlob = new Blob([authStore?.state?.user?.user_id || 'unknown'], { type: 'text/plain' });
+    formData.append('user_id',textBlob )
     const apiResponse = await fetch(`${config.public.apiBase}/api/classify/batch`, {
       method: 'POST',
       body: formData

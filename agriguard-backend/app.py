@@ -199,7 +199,6 @@ def save_to_database_if_available(prediction_record):
 
 
 
-
 # Utilitaires d'authentification
 def hash_password(password: str) -> str:
     """Hasher un mot de passe"""
@@ -754,10 +753,21 @@ def health_check():
         "mongodb_available": model_info['database_source'] == 'mongodb'
     })
 
+
+
+
+
 @app.route('/api/classify', methods=['POST'])
 def classify_disease():
     """Endpoint principal pour classifier une image avec sauvegarde permanente"""
     try:
+        # Récupérer l'utilisateur connecté de manière optionnelle
+        if 'user_id' not in request.files:
+            return jsonify({"error": "No ID provided"}), 400
+
+        user_id = request.files['user_id']
+        # print(request.body)
+
         if 'image' not in request.files:
             return jsonify({"error": "No image provided"}), 400
 
@@ -797,9 +807,10 @@ def classify_disease():
                 classification = result["classification"]
                 disease_info = result.get("disease_info", {})
 
-                # Créer l'enregistrement de prédiction
+                # Créer l'enregistrement de prédiction avec user_id
                 prediction_record = {
                     "prediction_id": prediction_id,
+                    "user_id": user_id,  # Ajout du user_id
                     "timestamp": result["timestamp"],
                     "original_filename": file.filename,
                     "processed_filename": save_result.get("permanent_filename"),
@@ -818,7 +829,8 @@ def classify_disease():
                     "metadata": {
                         "user_agent": request.headers.get('User-Agent'),
                         "client_ip": request.remote_addr,
-                        "image_saved": save_result["success"]
+                        "image_saved": save_result["success"],
+                        "authenticated": user_id is not 'unknow'
                     }
                 }
 
@@ -898,6 +910,13 @@ def classify_disease():
 def classify_batch():
     """Endpoint pour classifier plusieurs images avec sauvegarde permanente"""
     try:
+        # Récupérer l'utilisateur connecté de manière optionnelle
+        if 'user_id' not in request.files:
+            return jsonify({"error": "No ID provided"}), 400
+
+        user_id = request.files['user_id']
+        # print(user_id)
+
         if 'images' not in request.files:
             return jsonify({"error": "No images provided"}), 400
 
@@ -938,9 +957,10 @@ def classify_batch():
                         # Sauvegarder l'image de manière permanente
                         save_result = save_image_permanently(temp_filepath, file.filename)
 
-                        # Créer l'enregistrement de prédiction
+                        # Créer l'enregistrement de prédiction avec user_id
                         prediction_record = {
                             "prediction_id": prediction_id,
+                            "user_id": user_id,  # Ajout du user_id
                             "batch_id": batch_id,
                             "image_index": i,
                             "timestamp": classification["timestamp"],
@@ -955,7 +975,8 @@ def classify_batch():
                                 "user_agent": request.headers.get('User-Agent'),
                                 "client_ip": request.remote_addr,
                                 "image_saved": save_result["success"],
-                                "batch_processing": True
+                                "batch_processing": True,
+                                "authenticated": current_user is not None
                             }
                         }
 
@@ -1021,7 +1042,6 @@ def classify_batch():
     except Exception as e:
         logger.error(f"Erreur lors de la classification batch: {e}")
         return jsonify({"error": str(e)}), 500
-
 # ========================================
 # ENDPOINTS POUR LA BASE DE DONNÉES
 # ========================================

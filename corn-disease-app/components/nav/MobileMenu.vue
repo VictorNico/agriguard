@@ -30,7 +30,7 @@
 
       <!-- Auth Buttons for Mobile -->
       <div v-else class="px-5 py-3">
-        <MobileAuthButtons />
+        <MobileAuthButtons @click="handleLinkClick" />
       </div>
       <lazy-divider/>
       <div class="flex justify-between px-5 py-3">

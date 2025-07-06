@@ -75,6 +75,7 @@ class MetadataDict(TypedDict):
 users_schema = {
     "_id": ObjectId,
     "user_id": str,
+    "password_hash": str,
     "profile": {
         "first_name": str,
         "last_name": str,

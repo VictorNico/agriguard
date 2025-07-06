@@ -11,8 +11,8 @@ export const useAuthStore = defineStore('auth', {
     }),
 
     getters: {
-        isLoggedIn: (state) => state.isAuthenticated && state.user && state.tokens,
-        userName: (state) => state.user ? `${state.user.profile.first_name} ${state.user.profile.last_name}` : '',
+        isLoggedIn: (state) => state.isAuthenticated && state.user !== null && state.tokens !== null,
+        userName: (state) => state.user ? `${state.user?.profile?.first_name} ${state.user?.profile?.last_name}` : '',
         userEmail: (state) => state.user?.profile?.email || '',
         userPlan: (state) => state.user?.subscription?.plan || 'free',
         isAdmin: (state) => state.user?.role === 'admin',
@@ -22,38 +22,7 @@ export const useAuthStore = defineStore('auth', {
 
     actions: {
         // Utilitaire pour les requêtes API
-        async apiRequest(endpoint, options = {}) {
-            const config = useRuntimeConfig()
-            const baseURL = config.public.apiBase || '/api'
-
-            const defaultOptions = {
-                headers: {
-                    'Content-Type': 'application/json',
-                    ...options.headers
-                }
-            }
-
-            // Ajouter le token d'autorisation si disponible
-            if (this.tokens?.access_token && !options.skipAuth) {
-                defaultOptions.headers.Authorization = `Bearer ${this.tokens.access_token}`
-            }
-
-            const response = await fetch(`${baseURL}${endpoint}`, {
-                ...defaultOptions,
-                ...options,
-                headers: {
-                    ...defaultOptions.headers,
-                    ...options.headers
-                }
-            })
-
-            if (!response.ok) {
-                const errorData = await response.json().catch(() => ({}))
-                throw new Error(errorData.message || errorData.error || `HTTP ${response.status}`)
-            }
-
-            return response.json()
-        },
+        
 
         // Connexion
         async login(credentials) {
@@ -120,16 +89,34 @@ export const useAuthStore = defineStore('auth', {
                         method: 'POST'
                     })
                 }
-            } catch (error) {
-                console.error('Logout API error:', error)
-            } finally {
+
                 // Nettoyer les données locales
                 this.user = null
                 this.tokens = null
                 this.isAuthenticated = false
 
-                // Rediriger vers la page de connexion
-                await navigateTo('/api/auth')
+                // Rediriger vers la page d'accueil en cas de succès
+                await navigateTo('/')
+
+            } catch (error) {
+                console.error('Logout API error:', error)
+
+                // Afficher un toast d'erreur
+                const toast = useToast()
+                toast.add({
+                    severity: 'error',
+                    summary: 'Erreur de déconnexion',
+                    detail: error.message || 'Une erreur est survenue lors de la déconnexion',
+                    life: 5000
+                })
+
+                // // Même en cas d'erreur API, on nettoie les données locales
+                // this.user = null
+                // this.tokens = null
+                // this.isAuthenticated = false
+                //
+                // // Rediriger quand même vers la page d'accueil
+                // await navigateTo('/')
             }
         },
 

@@ -324,6 +324,7 @@ class UserService:
 
         user_doc = {
             "user_id": user_data["user_id"],
+            'password_hash': user_data["password_hash"],
             "profile": user_data.get("profile", {}),
             "farmer_info": user_data.get("farmer_info", {}),
             "subscription": user_data.get("subscription", {

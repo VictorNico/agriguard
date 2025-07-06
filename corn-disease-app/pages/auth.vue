@@ -410,7 +410,8 @@ const handleSubmit = async () => {
 
       // Redirection après connexion
       setTimeout(() => {
-        navigateTo('/dashboard')
+        // navigateTo('/dashboard')
+        navigateTo('/')
       }, 1000)
     } else {
       await authStore.register({
@@ -428,7 +429,8 @@ const handleSubmit = async () => {
 
       // Redirection après inscription
       setTimeout(() => {
-        navigateTo('/dashboard')
+        // navigateTo('/dashboard')
+        navigateTo('/')
       }, 1000)
     }
   } catch (error) {
