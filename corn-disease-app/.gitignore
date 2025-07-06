@@ -90,3 +90,4 @@ yarn-debug.log*
 !.env.example
 !package.json
 !tsconfig.json
+!config.xml

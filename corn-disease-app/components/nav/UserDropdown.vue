@@ -30,16 +30,15 @@
           v-if="isDropdownOpen"
           class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
       >
-        <NuxtLink
+        <span
             v-for="item in menuItems"
             :key="item.href"
-            :to="item.href"
             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-            @click="closeDropdown"
+            @click="item.command"
         >
           <i :class="item.icon" class="mr-2"></i>
           {{ item.label }}
-        </NuxtLink>
+        </span>
       </div>
     </Transition>
   </div>
@@ -47,7 +46,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-
+import {useAuthStore} from "~/stores/auth/index.js";
 const props = defineProps({
   user: Object
 })
@@ -55,24 +54,23 @@ const props = defineProps({
 const { t } = useI18n()
 const isDropdownOpen = ref(false)
 
+const authStore = useAuthStore()
 const menuItems = [
-  { href: '/profile', label: t('user.profile'), icon: 'fas fa-user' },
-  { href: '/settings', label: t('user.settings'), icon: 'fas fa-cog' },
-  { href: '/logout', label: t('user.logout'), icon: 'fas fa-sign-out-alt' }
+  { command: ()=>{navigateTo('/profile'); isDropdownOpen.value = false}, label: t('user.profile'), icon: 'fas fa-user' },
+  { command: ()=>{navigateTo('/settings'); isDropdownOpen.value = false}, label: t('user.settings'), icon: 'fas fa-cog' },
+  { command: ()=>{authStore.logout(); isDropdownOpen.value = false}, label: t('user.logout'), icon: 'fas fa-sign-out-alt' }
 ]
 
 const toggleDropdown = () => {
   isDropdownOpen.value = !isDropdownOpen.value
 }
 
-const closeDropdown = () => {
-  isDropdownOpen.value = false
-}
+
 
 // Fermer le dropdown en cliquant à l'extérieur
 const handleClickOutside = (event) => {
   if (!event.target.closest('.relative')) {
-    closeDropdown()
+    isDropdownOpen.value = false
   }
 }
 

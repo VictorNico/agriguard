@@ -7,13 +7,25 @@ const config: CapacitorConfig = {
   webDir: 'dist',
   ...(process.env.NODE_ENV === 'development' ? {
     server: {
-      url: 'http://192.168.171.160/:3000',
+      url: 'http://192.168.171.160:3000', // CORRIGÉ: port manquant
       cleartext: true
-    }} : {server: {
+    }
+  } : {
+    server: {
       androidScheme: 'https'
-    }}
-  ),
+    }
+  }),
+  ios: {
+    contentInset: 'automatic',
+    allowsLinkPreview: false
+  },
+  android: {
+    allowMixedContent: true,
+    captureInput: true,
+    webContentsDebuggingEnabled: true
+  },
   plugins: {
+    // SUPPRIMÉ: Configuration Permissions inexistante dans Capacitor
     Camera: {
       permissions: ['camera', 'photos']
     },
@@ -23,14 +35,9 @@ const config: CapacitorConfig = {
     Filesystem: {
       permissions: ['storage']
     },
-    Network: {
-      permissions: ['networkState']
-    },
     SplashScreen: {
       launchShowDuration: 3000,
-      launchAutoHide: false, // Contrôle manuel
-      // backgroundColor: '#4CAF50',
-      // backgroundColor: undefined,
+      launchAutoHide: false,
       androidSplashResourceName: 'splash',
       androidScaleType: 'CENTER_CROP',
       showSpinner: true,
@@ -40,15 +47,9 @@ const config: CapacitorConfig = {
       splashImmersive: true
     },
     StatusBar: {
-      style: 'default',
-      // backgroundColor: '#4CAF50'
+      style: 'default'
     }
-  },
-  // Configuration pour le développement
-  // server: {
-  //   url: 'http://localhost:3000',
-  //   cleartext: true
-  // }
+  }
 }
 
 export default config

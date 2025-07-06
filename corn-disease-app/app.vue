@@ -40,34 +40,6 @@
 </template>
 
 <script setup>
-import { Capacitor } from '@capacitor/core'
-import { StatusBar, Style } from '@capacitor/status-bar'
-
-const { isShowing, progress, message, loadingSequence } = useSplashScreen()
-
-// État pour le splash screen web
-const showWebSplash = ref(!Capacitor.isNativePlatform())
-
-// Lancer la séquence de chargement
-onMounted(async () => {
-  if (!Capacitor.isNativePlatform()) {
-    // Pour PWA, gérer le splash screen web
-    await loadingSequence()
-    showWebSplash.value = false
-  }
-  else{
-    await StatusBar.setOverlaysWebView({ overlay: false }) // <-- La bonne méthode
-    await StatusBar.setStyle({ style: Style.Light }) // optionnel
-  }
-})
-
-// Surveiller les changements d'état
-watch(isShowing, (newValue) => {
-  if (!Capacitor.isNativePlatform()) {
-    showWebSplash.value = newValue
-  }
-})
-
 import {useToast} from "primevue/usetoast";
 
 useHead({
@@ -85,13 +57,12 @@ useHead({
 })
 
 // manipulation de configuration d'execution - environement ...
-const config = useRuntimeConfig()
 import { useLocaleStore } from '~/stores/locale';
 
 // Initialiser les stores et vue-i18n
 const localeStore = useLocaleStore();
 const { locale } = useI18n();
-
+console.log(localeStore.language)
 // Initialiser la langue d'i18n avec celle du store
 locale.value = localeStore.language;
 
@@ -129,19 +100,59 @@ const auth = useAuthStore()
 const toast = useToast();
 const { t } = useI18n()
 // console.log(auth.user,auth.token,auth.isAuthenticated);
-const dd = auth.ValidateToken()
+const dd = auth.isTokenExpired()
 // console.log('token',dd);
 if(dd === 0){
   toast.add({ severity: 'info', summary: t('expiredSession'), life: 7000 });
 }
 
 import { useCookie } from '#app';
+import {permissionManager} from "~/services/PermissionManager.js";
+import capacitor from "~/plugins/capacitor.js";
 
 const cookieConsent = useCookie('cookie_consent');
 console.log(cookieConsent.value);
 const isConsentGiven = computed(()=> cookieConsent.value);
 
 console.log(isConsentGiven.value);
+
+import { Capacitor } from '@capacitor/core'
+import { StatusBar, Style } from '@capacitor/status-bar'
+
+const { isShowing, progress, message, loadingSequence } = useSplashScreen()
+
+// État pour le splash screen web
+const showWebSplash = ref(!Capacitor.isNativePlatform())
+
+// Lancer la séquence de chargement
+onMounted(async () => {
+  if (!Capacitor.isNativePlatform()) {
+    // Pour PWA, gérer le splash screen web
+    await loadingSequence()
+    showWebSplash.value = false
+  }
+  else{
+    if (Capacitor?.getPlatform()?.includes('android')) {
+      await permissionManager.diagnosePermissions();
+      const results = await permissionManager.requestAllPermissions({
+        timeout: 45000,
+        retryCount: 1,
+        showExplanation: true
+      });
+    }
+    await StatusBar.setOverlaysWebView({ overlay: false }) // <-- La bonne méthode
+    await StatusBar.setStyle({ style: Style.Light }) // optionnel
+  }
+})
+
+// Surveiller les changements d'état
+watch(isShowing, (newValue) => {
+  if (!Capacitor.isNativePlatform()) {
+    showWebSplash.value = newValue
+  }
+})
+
+
 </script>
 
 <style scoped>

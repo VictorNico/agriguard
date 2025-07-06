@@ -1,6 +1,5 @@
 // stores/locale.ts
 import { defineStore } from 'pinia'
-import { capacitorStorage } from '~/utils/persist-storage.js'
 
 export const useLocaleStore = defineStore('locale', {
     state: () => ({
@@ -12,7 +11,7 @@ export const useLocaleStore = defineStore('locale', {
         }
     },
     persist: {
-        storage: capacitorStorage,
+        key:'locale',
         paths: ['language'] // facultatif ici, mais utile si tu as d'autres props
     }
 })
