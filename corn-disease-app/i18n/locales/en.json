@@ -1,0 +1,705 @@
+{
+  "welcome": "Welcome",
+  "french": "French",
+  "english": "English",
+  "german": "German",
+  "export": "Export",
+  "app": {
+    "main_name": "AgriGuard",
+    "name": "AgriGuard AI",
+    "prefix_name": " AI",
+    "tagline": "Smart crop protection",
+    "description": "Intelligent crop disease classification using artificial intelligence"
+  },
+  "navigation": {
+    "home": "Home",
+    "scan": "Scan",
+    "history": "History",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "home": {
+    "title": "Analyze your crops instantly",
+    "subtitle": "Take a photo or upload an image to identify plant diseases",
+    "single_mode": "Single mode",
+    "batch_mode": "Batch mode",
+    "images_selected": "{count} image(s) selected",
+    "cta": {
+      "takePicture": "Take a photo",
+      "selectFromGallery": "or select from gallery",
+      "analyze": "🔍 Analyze image",
+      "analyzing": "Analyzing...",
+      "chooseAnother": "📁 Choose another image"
+    },
+    "uploadArea": {
+      "title": "Take a photo",
+      "subtitle": "or select from gallery",
+      "dragDrop": "Drag and drop an image here",
+      "batch_title": "Select multiple images",
+      "batch_subtitle": "Upload up to 10 images for batch analysis"
+    }
+  },
+  "camera": {
+    "permission": {
+      "title": "Camera access required",
+      "description": "To detect pests, we need access to your camera",
+      "grant": "Allow camera",
+      "denied": "Access denied. Please allow in settings."
+    },
+    "capture": "Capture",
+    "retake": "Retake",
+    "use": "Use this photo"
+  },
+  "image": {
+    "analyzeButton": "🔍 Analyze image",
+    "chooseAnother": "📁 Choose another image",
+    "choose": "Choose an image",
+    "choose_images": "Choose images",
+    "analyze": "Analyze image",
+    "analyze_batch": "Analyze {count} image(s)",
+    "take_photo": "Take a photo",
+    "clear": "Remove",
+    "clear_all": "Remove all",
+    "add_more": "Add more images",
+    "analyzing": "Analyzing...",
+    "selected": "Selected image",
+    "placeholder": "No image selected"
+  },
+  "results": {
+    "title": "Analysis Results",
+    "confidence": "Confidence",
+    "description": "Description",
+    "scientific_name": "Scientific name",
+    "impact": "Impact",
+    "symptoms": "Symptoms",
+    "crops_affected": "Affected crops",
+    "top_predictions": "Top 5 predictions",
+    "treatments": "Recommended treatments",
+    "prevention": "Prevention measures",
+    "severity": {
+      "very_high": "Very high",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "very_low": "Very low"
+    },
+    "urgency": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "status": {
+      "success": "Success",
+      "error": "Error"
+    },
+    "batch": {
+      "summary": "{successful} out of {total} images analyzed successfully"
+    },
+    "treatment": {
+      "recommended": "Recommended treatments",
+      "type": {
+        "chemical": "Chemical",
+        "biological": "Biological",
+        "cultural": "Cultural",
+        "organic": "Organic",
+        "integrated": "Integrated",
+        "chimique": "Chemical",
+        "biologique": "Biological",
+        "naturel": "Natural",
+        "stockage": "Storage",
+        "preventif": "Preventive",
+        "curatif": "Curative"
+      },
+      "dosage": "Dosage",
+      "application": "Application method",
+      "timing": "Application timing",
+      "frequency": "Frequency",
+      "precautions": "Precautions"
+    }
+  },
+  "pests": {
+    "legionnaire_automne": "Fall Armyworm",
+    "bruche_niebe": "Cowpea Weevil",
+    "cochenille_manioc": "Cassava Mealybug",
+    "mirides_cacao": "Cocoa Mirids",
+    "chenille_chou": "Cabbage Caterpillar",
+    "puceron": "Aphid",
+    "thrips": "Thrips",
+    "acarien": "Red Spider Mite"
+  },
+  "treatments": {
+    "cypermethrine": "Cypermethrin 10% EC",
+    "neem": "Neem Oil",
+    "bacillus": "Bacillus thuringiensis",
+    "savon_potassique": "Potassium Soap"
+  },
+  "buttons": {
+    "analyze": "Analyze",
+    "analyzing": "Analyzing...",
+    "retry": "Retry",
+    "clear": "Clear",
+    "cancel": "Cancel",
+    "save": "Save",
+    "share": "Share",
+    "download": "Download"
+  },
+  "offline": {
+    "title": "Offline mode",
+    "description": "You are currently offline. Some features may be limited.",
+    "retry": "Retry connection",
+    "indicator": "Offline"
+  },
+  "errors": {
+    "generic": "An error occurred",
+    "upload": "Error uploading image",
+    "camera": "Unable to access camera",
+    "timeout": "Request timeout",
+    "tryAgain": "Please try again",
+    "analysis": "Error analyzing image",
+    "network": "Network connection problem",
+    "server": "Server error",
+    "file": "Unsupported file format",
+    "classification": "Classification error",
+    "too_many_files": "Too many files selected (maximum 10)",
+    "invalid_files": "Some files are not valid images",
+    "retry": "Retry analysis"
+  },
+  "install": {
+    "title": "Install AgriGuard AI",
+    "description": "Install the app for quick access and offline use",
+    "install": "Install",
+    "later": "Later",
+    "available": "Installation available"
+  },
+  "language": {
+    "switch": "Switch language",
+    "french": "Français",
+    "english": "English"
+  },
+  "units": {
+    "percentage": "%",
+    "ml": "ml",
+    "liters": "L",
+    "grams": "g",
+    "kg": "kg"
+  },
+  "rgpd":{
+    "consent":{
+      "text1": "We use cookies to improve your user experience. By continuing to browse, you accept our",
+      "text2": "privacy policy",
+      "btn1": "Accept",
+      "btn2": "Decline"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "brand": "Your privacy is important to us. This policy explains what data we collect, why, and how it is used.",
+      "rule1": {
+        "title": "Data collected",
+        "text": "We collect cookies to analyse traffic and improve your experience."
+      },
+      "rule2": {
+        "title": "Your rights",
+        "text": "You have the right to request access, modification or deletion of your data."
+      },
+      "rule3": {
+        "title": "Contact",
+        "text": "If you have any questions, please contact us at"
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "marketPlace": "Marketplace",
+    "forum": "Forum",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "aboutUs": "About Us",
+    "dashboard": "Dashboard",
+    "community": "Community",
+    "analyzePlant": "Analyze Plant",
+    "openMainMenu": "Open main menu"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "user": {
+    "profile": "Your Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "openMenu": "Open user menu"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "viewAll": "View all notifications",
+    "noNotifications": "No notifications",
+    "markAsRead": "Mark as read",
+    "newAlert": "New alert",
+    "systemUpdate": "System update"
+  },
+  "company": {
+    "name": "AgriGuard",
+    "tagline": "Smart protection for your crops",
+    "description": "Your intelligent assistant for crop protection"
+  },
+  "actions": {
+    "analyze": "Analyze",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "connecting": "Connecting...",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "warning": "Warning",
+    "info": "Information",
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "success": "Success",
+    "error": "Error",
+    "completed": "Completed"
+  },
+  "accessibility": {
+    "closeMenu": "Close menu",
+    "openDropdown": "Open dropdown menu",
+    "toggleNavigation": "Toggle navigation",
+    "skipToContent": "Skip to main content",
+    "userAvatar": "User avatar",
+    "logo": "Company logo"
+  },
+  "time": {
+    "morning": "Early morning",
+    "evening": "Evening",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "now": "Now",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This week",
+    "lastWeek": "Last week",
+    "thisMonth": "This month",
+    "lastMonth": "Last month",
+    "minute": "minute",
+    "minutes": "minutes",
+    "hour": "hour",
+    "hours": "hours",
+    "day": "day",
+    "days": "days",
+    "week": "week",
+    "weeks": "weeks",
+    "month": "month",
+    "months": "months",
+    "year": "year",
+    "years": "years",
+    "ago": "ago"
+  },
+  "stats": {
+    "agricultural_losses": "Annual global agricultural gross domestic product (GDP) losses",
+    "cocoa_families": "Families depending on cocoa in Cameroon",
+    "corn_weevil_losses": "CFA francs of annual losses from corn weevil"
+  },
+  "hero": {
+    "title_part1": "Protect your crops with",
+    "title_part2": "artificial intelligence",
+    "description": "In Cameroon, 600,000 families depend on cocoa, but up to 40% of harvests are lost due to pests. Our solution protects your crops and your income.",
+    "demo_button": "View demo",
+    "download_button": "Download app",
+    "image_alt": "Modern agriculture with artificial intelligence"
+  },
+  "diseaseDetection": {
+    "subtitle": "Disease Detection",
+    "title": "Identify problems before they spread",
+    "description": "Our AI analyzes photos of your plants and detects over 200 diseases and pests with 98% accuracy.",
+    "features": {
+      "instant_analysis": {
+        "title": "Instant Analysis",
+        "description": "Take a photo of a suspicious leaf and get a diagnosis in seconds with treatment recommendations."
+      },
+      "historical_tracking": {
+        "title": "Historical Tracking",
+        "description": "View analysis history by plot to identify recurring problems and seasonal trends."
+      },
+      "early_alerts": {
+        "title": "Early Alerts",
+        "description": "Receive notifications when similar diseases are detected in your area by other farmers."
+      }
+    }
+  },
+  "community": {
+    "title": "Community Ecosystem",
+    "subtitle": "Connect with other farmers",
+    "description": "Share tips, receive local alerts, and find mentors to improve your practices.",
+
+    "alerts": {
+      "title": "Community Alerts",
+      "description": "Stay informed about detected issues near you",
+      "addButton": "Add Alert",
+      "messages": {
+        "aphids": "Aphids detected on my wheat plants 5km from here",
+        "mildew": "First signs of mildew in my north field"
+      },
+      "times": {
+        "twoHours": "2 hours ago",
+        "today": "Today, 09:24"
+      }
+    },
+
+    "forum": {
+      "title": "Agricultural Forum",
+      "description": "Geo-located discussions and experience sharing",
+      "browseButton": "Browse Discussions",
+      "topics": {
+        "bioTreatment": "Organic treatment against aphids",
+        "cornSowing": "Best time to sow corn",
+        "newPest": "New pest in the region"
+      },
+      "replies": {
+        "twelve": "12 replies",
+        "twentyFour": "24 replies",
+        "seven": "7 replies"
+      },
+      "distances": {
+        "threeKm": "3 km from you",
+        "eightKm": "8 km from you",
+        "fiveKm": "5 km from you"
+      }
+    },
+
+    "mentoring": {
+      "title": "Mentoring",
+      "description": "Connect with experienced farmers",
+      "findButton": "Find a Mentor",
+      "experiences": {
+        "twentyFive": "25 years of experience",
+        "fifteen": "15 years of experience"
+      },
+      "specialties": {
+        "organic": "Organic farming specialist",
+        "pestManagement": "Pest management expert"
+      },
+      "reviews": {
+        "thirtyTwo": "32 reviews",
+        "twentyEight": "28 reviews"
+      }
+    },
+
+    "marketplace": {
+      "title": "Marketplace",
+      "description": "Buy and sell agricultural products and equipment locally",
+      "buyButton": "Buy",
+      "distances": {
+        "eightKm": "at 8km",
+        "fifteenKm": "at 15km",
+        "fiveKm": "at 5km"
+      },
+      "products": {
+        "bioFungicide": {
+          "name": "Bio Fungicide",
+          "details": "5L • New"
+        },
+        "sprayer": {
+          "name": "Sprayer",
+          "details": "500L • Used"
+        },
+        "seeds": {
+          "name": "Resistant Seeds",
+          "details": "Wheat • 25kg"
+        }
+      },
+      "addProduct": {
+        "title": "Add Product",
+        "description": "Sell your unused equipment or products",
+        "button": "Add"
+      }
+    }
+  },
+  "aboutUs": {
+    "pageTitle": "About Us",
+    "pageSubtitle": "Discover our story, our mission and our commitment to agricultural innovation in Africa",
+    "ourStory": "Our Story",
+    "story1": "Founded in 2020 by a team of passionate agronomists and technology experts, our company was born from a simple observation: African farmers needed accessible and reliable tools to protect their crops.",
+    "story2": "Through years of research and development, we have created an innovative platform that combines artificial intelligence, computer vision and agricultural expertise to provide precise and instant diagnoses.",
+    "story3": "Today, we are proud to support thousands of farmers across Africa, helping them increase their yields and secure their livelihoods.",
+    "innovationTitle": "Innovation",
+    "innovationDesc": "Cutting-edge technology at the service of agriculture",
+    "mission": "Mission",
+    "missionFull": "To democratize access to agricultural expertise through innovative and accessible technological solutions, enabling every farmer to optimize their production and protect their crops.",
+    "vision": "Vision",
+    "visionFull": "To become the leading platform for agricultural diagnosis in Africa, contributing to food security and sustainable development of the continent.",
+    "values": "Values",
+    "valuesFull": "Innovation, accessibility, sustainability and commitment to African farmers guide all our actions and decisions.",
+    "impact": "Our Impact",
+    "farmers": "Farmers Supported",
+    "accuracy": "Diagnostic Accuracy",
+    "diagnoses": "Diagnoses Performed",
+    "regions": "Regions Covered",
+    "meetTeam": "Meet Our Team",
+    "partners": "Our Partners",
+    "partner1": "AgriTech Africa",
+    "partner2": "Green Innovation",
+    "partner3": "FarmConnect",
+    "partner4": "TechForGood",
+    "metaTitle": "About Us - Agricultural Innovation for Africa",
+    "metaDescription": "Discover our story, our mission and our commitment to agricultural innovation in Africa. Learn how we help farmers optimize their production.",
+    "team": {
+      "member1": {
+        "name": "Dr. Jean Kamau",
+        "role": "CEO & Co-Founder",
+        "bio": "Agricultural engineer with 15 years of experience in sustainable agriculture and agricultural technology innovation in Africa."
+      },
+      "member2": {
+        "name": "Amina Mbeki",
+        "role": "CTO & Co-Founder",
+        "bio": "Computer science expert specialized in artificial intelligence and machine learning applied to agriculture."
+      },
+      "member3": {
+        "name": "Dr. Fatou Kone",
+        "role": "Head of Research",
+        "bio": "PhD in Plant Pathology, leads our research team in developing diagnostic algorithms for crop diseases."
+      },
+      "member4": {
+        "name": "Samuel Mwangi",
+        "role": "Head of Operations",
+        "bio": "Operations expert with extensive experience in scaling technological solutions across Africa."
+      },
+      "member5": {
+        "name": "Dr. Rachel Nkomo",
+        "role": "Agricultural Advisor",
+        "bio": "Agronomist with 20 years of field experience, ensures our solutions meet farmers' real needs."
+      },
+      "member6": {
+        "name": "Léa Moussa",
+        "role": "Head of Marketing",
+        "bio": "Marketing and communication expert passionate about promoting agricultural innovation in Africa."
+      }
+    }
+  },
+  "blog": {
+    "pageTitle": "Blog",
+    "pageSubtitle": "Discover our latest articles on plant diseases, prevention and agricultural innovation",
+    "searchPlaceholder": "Search articles...",
+    "categories": {
+      "all": "All Categories",
+      "diseases": "Diseases",
+      "prevention": "Prevention",
+      "treatment": "Treatment",
+      "farming": "Farming",
+      "research": "Research",
+      "technology": "Technology"
+    },
+    "featured": "Featured",
+    "readTime": "{minutes} min read",
+    "readMore": "Read More",
+    "featuredImage": "Featured Article",
+    "noResults": "No articles found",
+    "tryDifferentSearch": "Try adjusting your search terms or filters",
+    "loadMore": "Load More Articles",
+    "newsletter": {
+      "title": "Stay Informed",
+      "description": "Subscribe to our newsletter to receive the latest articles and updates on agricultural innovation",
+      "placeholder": "Enter your email address",
+      "subscribe": "Subscribe"
+    },
+    "metaTitle": "Blog - Agricultural Innovation and Plant Disease Prevention",
+    "metaDescription": "Discover our latest articles on plant diseases, prevention techniques and agricultural innovations to help African farmers optimize their production.",
+    "articles": {
+      "article1": {
+        "title": "Common Maize Diseases in Tanzania: Identification and Prevention",
+        "excerpt": "Learn to identify and prevent the most common maize diseases affecting crops in Tanzania. A comprehensive guide for local farmers with practical prevention strategies."
+      },
+      "article2": {
+        "title": "Early Detection Techniques for Crop Diseases",
+        "excerpt": "Discover modern techniques for early detection of plant diseases using visual inspection and digital tools to protect your crops before it's too late."
+      },
+      "article3": {
+        "title": "Sustainable Treatment Methods for Plant Diseases",
+        "excerpt": "Explore environmentally friendly and economically viable treatment methods for plant diseases, focusing on organic and sustainable approaches."
+      },
+      "article4": {
+        "title": "Best Farming Practices for Disease Prevention",
+        "excerpt": "Learn the fundamental farming practices that can significantly reduce the risk of plant diseases in your crops through proper cultivation techniques."
+      },
+      "article5": {
+        "title": "AI Technology in Maize Disease Detection",
+        "excerpt": "Discover how artificial intelligence is revolutionizing plant disease detection, making diagnosis faster and more accurate for farmers worldwide."
+      },
+      "article6": {
+        "title": "Climate Change Impact on Plant Disease Patterns",
+        "excerpt": "Research analysis on how climate change is affecting plant disease patterns and what farmers can do to adapt their practices accordingly."
+      }
+    }
+  },
+  "faq": {
+    "pageTitle": "Frequently Asked Questions",
+    "pageSubtitle": "Find quick answers to the most common questions about plant disease diagnosis",
+    "metaTitle": "FAQ - Frequently Asked Questions | Plant Disease Diagnosis",
+    "metaDescription": "Discover answers to frequently asked questions about plant disease diagnosis, treatment, and prevention.",
+    "searchPlaceholder": "Search in questions...",
+    "noResults": "No results found",
+    "tryDifferentSearch": "Try different keywords",
+    "stillHaveQuestions": "Still have questions?",
+    "contactDescription": "Our team of experts is here to help you with your specific questions about plant diseases.",
+    "contactSupport": "Contact Support",
+    "joinForum": "Join Forum",
+    "categories": {
+      "all": "All",
+      "diagnosis": "Diagnosis",
+      "diseases": "Diseases",
+      "treatment": "Treatment",
+      "prevention": "Prevention",
+      "app": "App",
+      "technical": "Technical"
+    },
+    "questions": {
+      "q1": {
+        "question": "How to diagnose plant diseases with the application?",
+        "answer": "Simply take a clear photo of the diseased plant ensuring that symptoms are clearly visible. Our AI will analyze the image and provide you with an accurate diagnosis along with appropriate treatment recommendations."
+      },
+      "q2": {
+        "question": "What is the accuracy of automatic diagnosis?",
+        "answer": "Our artificial intelligence system achieves over 95% accuracy on the most common diseases. It is trained on a database of over 100,000 diseased plant images validated by expert phytopathologists."
+      },
+      "q3": {
+        "question": "What are the most common diseases detected?",
+        "answer": "The application can detect over 200 different diseases including fungal diseases (downy mildew, powdery mildew, rust), bacterial diseases (fire blight, bacterial spots), viral diseases (mosaic, yellowing), and nutritional deficiencies."
+      },
+      "q4": {
+        "question": "How to differentiate between a disease and a nutritional deficiency?",
+        "answer": "Diseases often present localized symptoms with specific shapes (spots, halos, sporulation), while deficiencies generally affect the plant more uniformly with characteristic color changes (yellowing, browning)."
+      },
+      "q5": {
+        "question": "What treatments are recommended for fungal diseases?",
+        "answer": "Treatments vary depending on the disease: preventive fungicides (bordeaux mixture, sulfur), curative treatments (triazoles, strobilurins), and biological methods (Bacillus subtilis, plant extracts). It's important to respect doses and application timing."
+      },
+      "q6": {
+        "question": "How to prevent plant diseases?",
+        "answer": "Prevention relies on several pillars: crop rotation, choosing resistant varieties, irrigation management, crop aeration, tool disinfection, and regular monitoring. A healthy environment significantly reduces risks."
+      },
+      "q7": {
+        "question": "Does the application work offline?",
+        "answer": "Yes, once downloaded, the application can work offline for basic diagnostics. However, an internet connection is required to access the latest database updates and advanced features."
+      },
+      "q8": {
+        "question": "How to improve the quality of my photos for better diagnosis?",
+        "answer": "Take sharp photos with good natural lighting, frame symptoms closely, avoid strong shadows, and take multiple angles if necessary. A distance of 20-30 cm from the affected area is generally optimal."
+      },
+      "q9": {
+        "question": "What to do if the application doesn't recognize my plant?",
+        "answer": "You can submit your case to our experts via the 'Ask expert advice' function. Include multiple photos from different angles and describe the observed symptoms. Our team will respond within 24-48 hours."
+      },
+      "q10": {
+        "question": "When to apply preventive treatments?",
+        "answer": "Preventive treatments are more effective before symptoms appear, generally in early spring or according to weather conditions favorable to diseases (high humidity, mild temperatures). Check the treatment calendar in the application."
+      }
+    }
+  },
+  "forum": {
+    "pageTitle": "Community Forum",
+    "pageSubtitle": "Connect with experts and fellow farmers about plant diseases",
+    "metaTitle": "Community Forum | Plant Disease Diagnosis",
+    "metaDescription": "Join our community of experts and farmers to discuss plant diseases, diagnostics and treatments.",
+    "createPost": "Create Post",
+    "joinCommunity": "Join Community",
+    "stats": {
+      "totalPosts": "Total Posts",
+      "activeUsers": "Active Users",
+      "totalTopics": "Total Topics",
+      "expertsOnline": "Experts Online"
+    },
+    "categories": {
+      "title": "Categories",
+      "all": "All",
+      "diseases": "Diseases",
+      "diagnosis": "Diagnosis",
+      "treatment": "Treatment",
+      "prevention": "Prevention",
+      "farming": "Farming",
+      "general": "General"
+    },
+    "onlineUsers": "Online Users",
+    "searchPlaceholder": "Search in forum...",
+    "sort": {
+      "latest": "Latest",
+      "popular": "Most Popular",
+      "answered": "Answered",
+      "unanswered": "Unanswered"
+    },
+    "loadMore": "Load More",
+    "postTitle": "Post Title",
+    "postTitlePlaceholder": "Enter a descriptive title for your post",
+    "category": "Category",
+    "selectCategory": "Select a category",
+    "postContent": "Post Content",
+    "postContentPlaceholder": "Describe your problem or share your knowledge...",
+    "markAsQuestion": "Mark as question",
+    "cancel": "Cancel",
+    "publishPost": "Publish Post",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysAgo": "{days} days ago",
+    "posts": {
+      "post1": {
+        "title": "Identifying downy mildew on my tomato plants",
+        "excerpt": "My tomato plants show yellowish spots on leaves with whitish down on the underside. Is this downy mildew? How to treat it effectively without harming the fruits?"
+      },
+      "post2": {
+        "title": "Early diagnosis methods for fungal diseases",
+        "excerpt": "What are the best techniques to detect fungal diseases before they spread throughout the crop? Looking for practical experiences."
+      },
+      "post3": {
+        "title": "Biological treatment against powdery mildew",
+        "excerpt": "Sharing successful experience with biological treatments using baking soda and essential oils to fight powdery mildew on cucurbits."
+      },
+      "post4": {
+        "title": "Disease prevention in greenhouses",
+        "excerpt": "Practical advice for maintaining a healthy greenhouse environment and preventing disease occurrence. Humidity management, ventilation and disinfection."
+      },
+      "post5": {
+        "title": "Crop rotation to limit pathogens",
+        "excerpt": "Discussion on best practices for crop rotation to break the cycle of soil pathogens and reduce disease incidence."
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "footer": {"quickLinks": "Quick Links",
+    "support": "Support",
+    "helpCenter": "Help Center",
+    "contact": "Contact",
+    "documentation": "Documentation",
+    "privacy": "Privacy",
+    "copyright": "All rights reserved. {author}.",
+    "terms": "Terms of Use",
+    "cookies": "Cookie Policy"
+  }
+}

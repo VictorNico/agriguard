@@ -1,0 +1,172 @@
+{
+  "maize_viral_diseases": {
+    "MLN": {
+      "name": "Maladie Létale à Nécrose (MLN)",
+      "class": "Maladie virale",
+      "pathogens": [
+        {
+          "virus": "MCMV",
+          "full_name": "Maize Chlorotic Mottle Virus",
+          "french_name": "Virus de la marbrure chlorotique du maïs",
+          "role": "Composant principal de la MLN"
+        },
+        {
+          "virus": "SCMV",
+          "full_name": "Sugarcane Mosaic Virus",
+          "french_name": "Virus de la mosaïque de la canne à sucre",
+          "role": "Composant synergique de la MLN"
+        }
+      ],
+      "cause": "Co-infection par MCMV et potyvirus (SCMV/MDMV)",
+      "vectors": [
+        {
+          "insect": "Frankliniella sp.",
+          "virus_transmitted": "MCMV",
+          "transmission_mode": "persistant"
+        },
+        {
+          "insect": "Rhopalosiphum sp.",
+          "virus_transmitted": "SCMV",
+          "transmission_mode": "non-persistant"
+        },
+        {
+          "insect": "Myzus sp.",
+          "virus_transmitted": "SCMV",
+          "transmission_mode": "non-persistant"
+        }
+      ],
+      "control_methods": {
+        "resistance": {
+          "type": "Résistance génétique",
+          "description": "Utilisation de variétés résistantes/tolérantes",
+          "priority": "high"
+        },
+        "vector_control": {
+          "type": "Contrôle des vecteurs",
+          "description": "Suivre/Contrôler les populations des insectes vecteurs",
+          "methods": [
+            "Traitement insecticide des semences",
+            "Pulvérisations foliaires ciblées",
+            "Lutte biologique",
+            "Pièges attractifs"
+          ],
+          "priority": "critical"
+        },
+        "host_reservoirs": {
+          "type": "Gestion des réservoirs d'hôtes",
+          "description": "Élimination des sources d'inoculum",
+          "methods": [
+            "Élimination des résidus de culture",
+            "Gestion des graminées adventices",
+            "Contrôle des repousses"
+          ],
+          "priority": "high"
+        },
+        "fallow_management": {
+          "type": "Jachère",
+          "description": "Période de repos sans culture hôte",
+          "duration": "Au moins une saison",
+          "priority": "medium"
+        },
+        "clean_seed": {
+          "type": "Semence propre",
+          "description": "Utilisation de semences certifiées exemptes de virus",
+          "certification": "L'Association Africaine du Commerce des Semences (AFSTA)",
+          "priority": "critical"
+        }
+      },
+      "symptoms": [
+        "Jaunissement des feuilles",
+        "Nécrose des tissus",
+        "Nanisme des plants",
+        "Mort prématurée",
+        "Réduction drastique du rendement"
+      ],
+      "impact": "Pertes de rendement 20-90%",
+      "geographic_distribution": "Afrique de l'Est, expansion vers autres régions",
+      "reference": {
+        "source": "AFSTA",
+        "url": "https://www.afsta.org/congress/wp-content/uploads/2024/02/DOCUMENT-DE-POSITION-SUR-LA-MALADIE-LETALE-A-NECROSE-DU-MAIS.pdf",
+        "title": "Document de position sur la maladie létale à nécrose du maïs"
+      }
+    },
+    "MSV": {
+      "name": "Virus de la rayure du maïs (MSV)",
+      "class": "Maladie virale",
+      "pathogens": [
+        {
+          "virus": "MSV",
+          "full_name": "Maize Streak Virus",
+          "french_name": "Virus de la rayure du maïs",
+          "role": "Agent pathogène unique"
+        }
+      ],
+      "cause": "Infection par le virus MSV",
+      "vectors": [
+        {
+          "insect": "Cicadulina mbila",
+          "virus_transmitted": "MSV",
+          "transmission_mode": "persistant propagatif"
+        }
+      ],
+      "control_methods": {
+        "resistance": {
+          "type": "Résistance génétique",
+          "description": "Variétés résistantes au MSV",
+          "priority": "high"
+        },
+        "vector_control": {
+          "type": "Contrôle des vecteurs",
+          "description": "Lutte contre Cicadulina mbila",
+          "methods": [
+            "Traitement insecticide",
+            "Dates de semis appropriées",
+            "Lutte biologique"
+          ],
+          "priority": "high"
+        },
+        "cultural_practices": {
+          "type": "Pratiques culturales",
+          "description": "Gestion agronomique",
+          "methods": [
+            "Dates de semis optimales",
+            "Élimination des graminées adventices",
+            "Rotation des cultures"
+          ],
+          "priority": "medium"
+        }
+      },
+      "symptoms": [
+        "Rayures chlorotiques parallèles aux nervures",
+        "Jaunissement des feuilles",
+        "Retard de croissance",
+        "Réduction de la production"
+      ],
+      "impact": "Pertes de rendement variables selon la précocité d'infection",
+      "geographic_distribution": "Afrique subsaharienne"
+    }
+  },
+  "integrated_management": {
+    "priority_actions": [
+      "Utilisation de semences certifiées",
+      "Variétés résistantes/tolérantes",
+      "Contrôle des vecteurs",
+      "Gestion des réservoirs d'hôtes",
+      "Surveillance et détection précoce"
+    ],
+    "prevention_strategy": {
+      "seed_system": "Système semencier robuste avec certification",
+      "variety_deployment": "Déploiement de variétés résistantes",
+      "vector_management": "Gestion intégrée des vecteurs",
+      "farmer_training": "Formation des agriculteurs",
+      "monitoring_system": "Système de surveillance épidémiologique"
+    },
+    "key_stakeholders": [
+      "AFSTA (Association Africaine du Commerce des Semences)",
+      "Instituts de recherche nationaux",
+      "Services de vulgarisation",
+      "Organisations paysannes",
+      "Partenaires au développement"
+    ]
+  }
+}
