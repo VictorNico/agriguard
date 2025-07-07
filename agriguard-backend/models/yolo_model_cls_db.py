@@ -115,8 +115,8 @@ class MaizeDiseaseClassifier:
                     {
                         "class": self.class_names[i] if i < len(self.class_names) else f"unknown_{i}",
                         "class_id": int(i),
-                        "confidence": float(probs[i]),
-                        "confidence_percentage": float(probs[i] * 100)
+                        "confidence": float(f"{float(str(probs[i])):.2f}"),
+                        "confidence_percentage": float(f"{float(str(probs[i] * 100)):.2f}")
                     }
                     for i in top5_indices
                 ]
@@ -130,8 +130,8 @@ class MaizeDiseaseClassifier:
                     "classification": {
                         "predicted_class": predicted_class,
                         "class_id": predicted_class_id,
-                        "confidence": confidence,
-                        "confidence_percentage": confidence * 100,
+                        "confidence": float(f"{float(str(confidence)):.2f}"),
+                        "confidence_percentage": float(f"{float(str(confidence*100)):.2f}"),
                         "top5_predictions": top5_predictions
                     },
                     "disease_info": disease_info
