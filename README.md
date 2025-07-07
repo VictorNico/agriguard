@@ -517,3 +517,15 @@ open http://localhost:3000/api/health
 
 ---
 **Happy Coding Everyone 🚀**
+
+
+## 📄 LICENSE & INTELLECTUAL PROPERTY
+
+⚠️ **IMPORTANT**: This project is proprietary software developed by Digital Farmers Team.
+
+- 🔍 **Viewing**: Allowed for evaluation and educational purposes
+- 🚫 **Commercial Use**: Prohibited without explicit permission
+- 🚫 **Copying/Modification**: Strictly prohibited
+- 📧 **Commercial Inquiries**: Contact [votre-email]
+
+© 2025 Digital Farmers Team. All rights reserved.
