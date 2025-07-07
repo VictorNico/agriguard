@@ -237,6 +237,7 @@ app.db
 
 # Uploads
 uploads/
+storage/
 static/uploads/
 media/
 

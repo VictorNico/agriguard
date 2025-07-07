@@ -1,0 +1,323 @@
+{
+  "diseases": {
+    "MLN": {
+      "name": "Nécrose Létale du Maïs (MLN)",
+      "scientific_name": "Maize Lethal Necrosis",
+      "type": "maladie_virale",
+      "description": "Maladie causée par la co-infection de MCMV et potyvirus (SCMV/MDMV). Provoque un jaunissement des feuilles suivi de nécrose et peut entraîner la mort des plants.",
+      "crops": ["maïs"],
+      "urgency": "critical",
+      "symptoms": [
+        "Jaunissement des feuilles",
+        "Nécrose des tissus foliaires",
+        "Nanisme des plants",
+        "Mort prématurée",
+        "Réduction drastique du rendement"
+      ],
+      "pathogens": [
+        {
+          "virus": "MCMV",
+          "full_name": "Maize Chlorotic Mottle Virus",
+          "french_name": "Virus de la marbrure chlorotique du maïs",
+          "role": "Composant principal de la MLN"
+        },
+        {
+          "virus": "SCMV",
+          "full_name": "Sugarcane Mosaic Virus",
+          "french_name": "Virus de la mosaïque de la canne à sucre",
+          "role": "Composant synergique de la MLN"
+        }
+      ],
+      "vectors": [
+        {
+          "name": "Thrips Frankliniella sp.",
+          "scientific_name": "Frankliniella sp.",
+          "virus_transmitted": "MCMV",
+          "transmission_mode": "persistant",
+          "percentage_in_study": "8.24%",
+          "description": "Vecteur principal du virus MCMV, insecte de petite taille qui se nourrit en piquant les tissus végétaux"
+        },
+        {
+          "name": "Puceron Rhopalosiphum sp.",
+          "scientific_name": "Rhopalosiphum sp.",
+          "virus_transmitted": "SCMV",
+          "transmission_mode": "non-persistant",
+          "percentage_in_study": "4.85%",
+          "description": "Vecteur des potyvirus, forme des colonies sur les feuilles"
+        },
+        {
+          "name": "Puceron vert Myzus sp.",
+          "scientific_name": "Myzus sp.",
+          "virus_transmitted": "SCMV",
+          "transmission_mode": "non-persistant",
+          "percentage_in_study": "5.11%",
+          "description": "Vecteur polyphage très mobile capable de transmettre sur de longues distances"
+        }
+      ],
+      "treatment": [
+        {
+          "type": "preventif",
+          "category": "varietes_resistantes",
+          "product": "Variétés résistantes/tolérantes MLN",
+          "dosage": "N/A",
+          "timing": "Sélection variétale",
+          "priority": "critical",
+          "description": "Utilisation de variétés génétiquement résistantes"
+        },
+        {
+          "type": "chimique",
+          "category": "traitement_semences",
+          "product": "Imidaclopride 70% WS",
+          "dosage": "3-5g pour 1kg de semences",
+          "timing": "Avant semis",
+          "priority": "high",
+          "description": "Protection contre les thrips vecteurs"
+        },
+        {
+          "type": "chimique",
+          "category": "pulverisation_foliaire",
+          "product": "Spinosad 240 SC",
+          "dosage": "0.5ml pour 1L d'eau",
+          "timing": "Dès détection des vecteurs",
+          "priority": "high",
+          "description": "Contre les thrips"
+        },
+        {
+          "type": "chimique",
+          "category": "anti_pucerons",
+          "product": "Pirimicarbe 50% WG",
+          "dosage": "1g pour 1L d'eau",
+          "timing": "Dès apparition des colonies",
+          "priority": "high",
+          "description": "Traitement sélectif contre les pucerons"
+        },
+        {
+          "type": "biologique",
+          "category": "auxiliaires",
+          "product": "Amblyseius swirskii",
+          "dosage": "Lâchers préventifs",
+          "timing": "Maintien permanent",
+          "priority": "medium",
+          "description": "Prédateur naturel des thrips"
+        },
+        {
+          "type": "biologique",
+          "category": "auxiliaires",
+          "product": "Aphidius colemani",
+          "dosage": "Lâchers ciblés",
+          "timing": "Lutte préventive",
+          "priority": "medium",
+          "description": "Parasitoïde des pucerons"
+        }
+      ],
+      "prevention": [
+        "Utilisation de semences certifiées exemptes de virus",
+        "Variétés résistantes/tolérantes MLN",
+        "Dates de semis synchronisées",
+        "Élimination des résidus de culture infectés",
+        "Gestion des graminées adventices",
+        "Pièges bleus collants pour thrips",
+        "Bandes fleuries pour auxiliaires"
+      ],
+      "impact": "Pertes de rendement 20-90% selon les conditions",
+      "geographic_distribution": "Afrique de l'Est, expansion vers autres régions"
+    },
+    "MSV": {
+      "name": "Virus de la rayure du maïs (MSV)",
+      "scientific_name": "Maize Streak Virus",
+      "type": "maladie_virale",
+      "description": "Maladie virale causée par le virus MSV, caractérisée par des rayures chlorotiques parallèles aux nervures des feuilles.",
+      "crops": ["maïs"],
+      "urgency": "high",
+      "symptoms": [
+        "Rayures chlorotiques parallèles aux nervures",
+        "Jaunissement des feuilles",
+        "Retard de croissance",
+        "Réduction de la production"
+      ],
+      "pathogens": [
+        {
+          "virus": "MSV",
+          "full_name": "Maize Streak Virus",
+          "french_name": "Virus de la rayure du maïs",
+          "role": "Agent pathogène unique"
+        }
+      ],
+      "vectors": [
+        {
+          "name": "Cicadelle Cicadulina mbila",
+          "scientific_name": "Cicadulina mbila",
+          "virus_transmitted": "MSV",
+          "transmission_mode": "persistant propagatif",
+          "description": "Vecteur principal du virus MSV"
+        }
+      ],
+      "treatment": [
+        {
+          "type": "preventif",
+          "category": "varietes_resistantes",
+          "product": "Variétés résistantes au MSV",
+          "dosage": "N/A",
+          "timing": "Sélection variétale",
+          "priority": "critical",
+          "description": "Utilisation de variétés génétiquement résistantes"
+        },
+        {
+          "type": "chimique",
+          "category": "insecticide",
+          "product": "Traitement insecticide contre cicadelles",
+          "dosage": "Selon recommandations",
+          "timing": "Dès détection",
+          "priority": "high",
+          "description": "Lutte contre Cicadulina mbila"
+        },
+        {
+          "type": "biologique",
+          "category": "auxiliaires",
+          "product": "Lutte biologique contre cicadelles",
+          "dosage": "Selon protocole",
+          "timing": "Préventif",
+          "priority": "medium",
+          "description": "Ennemis naturels des cicadelles"
+        }
+      ],
+      "prevention": [
+        "Dates de semis optimales",
+        "Élimination des graminées adventices",
+        "Rotation des cultures",
+        "Variétés résistantes",
+        "Surveillance des populations de cicadelles"
+      ],
+      "impact": "Pertes de rendement variables selon la précocité d'infection",
+      "geographic_distribution": "Afrique subsaharienne"
+    }
+  },
+  "classes": {
+    "saine": {
+      "name": "Plante saine",
+      "description": "Feuille de maïs en bonne santé, sans signes de maladie ou d'attaque de ravageurs",
+      "type": "etat_sain",
+      "crops": ["maïs"],
+      "urgency": "none",
+      "symptoms": [
+        "Feuilles vertes et vigoureuses",
+        "Croissance normale",
+        "Absence de taches ou décolorations",
+        "Absence de nécrose"
+      ],
+      "recommendations": [
+        "Maintenir les bonnes pratiques culturales",
+        "Surveillance préventive",
+        "Continuer la fertilisation équilibrée",
+        "Maintenir l'irrigation adaptée"
+      ]
+    }
+  },
+  "legacy_pests": {
+    "legionnaire_automne": {
+      "name": "Légionnaire d'automne",
+      "scientific_name": "Spodoptera frugiperda",
+      "type": "ravageur_insecte",
+      "description": "Chenille destructrice qui attaque le maïs, sorgho et autres graminées",
+      "crops": ["maïs", "sorgho", "mil"],
+      "urgency": "high",
+      "symptoms": [
+        "Trous dans les feuilles",
+        "Présence de chenilles",
+        "Déjections sur les feuilles",
+        "Dégâts sur les épis"
+      ],
+      "treatment": [
+        {
+          "type": "chimique",
+          "product": "Cypermethrine 10% EC",
+          "dosage": "50ml pour 15L d'eau",
+          "timing": "Tôt le matin ou le soir",
+          "priority": "high"
+        },
+        {
+          "type": "biologique",
+          "product": "Bt (Bacillus thuringiensis)",
+          "dosage": "2g pour 1L d'eau",
+          "timing": "Répéter tous les 7 jours",
+          "priority": "medium"
+        }
+      ],
+      "prevention": [
+        "Rotation des cultures",
+        "Destruction des résidus",
+        "Surveillance des vols d'adultes",
+        "Lutte biologique préventive"
+      ]
+    },
+    "bruche_niebe": {
+      "name": "Bruche du niébé",
+      "scientific_name": "Callosobruchus maculatus",
+      "type": "ravageur_insecte",
+      "description": "Coléoptère qui attaque les graines de légumineuses",
+      "crops": ["niébé", "haricot", "arachide"],
+      "urgency": "medium",
+      "symptoms": [
+        "Trous dans les graines",
+        "Présence d'adultes",
+        "Poudre dans les graines",
+        "Graines creuses"
+      ],
+      "treatment": [
+        {
+          "type": "stockage",
+          "product": "Sable fin ou cendres",
+          "dosage": "Mélanger avec les graines",
+          "timing": "Avant stockage",
+          "priority": "high"
+        }
+      ],
+      "prevention": [
+        "Séchage complet",
+        "Contenants hermétiques",
+        "Température contrôlée",
+        "Inspection régulière"
+      ]
+    },
+    "cochenille_manioc": {
+      "name": "Cochenille du manioc",
+      "scientific_name": "Phenacoccus manihoti",
+      "type": "ravageur_insecte",
+      "description": "Insecte suceur qui affaiblit les plants de manioc",
+      "crops": ["manioc"],
+      "urgency": "high",
+      "symptoms": [
+        "Feuilles jaunissantes",
+        "Présence de cochenilles blanches",
+        "Miellat sur les feuilles",
+        "Affaiblissement des plants"
+      ],
+      "treatment": [
+        {
+          "type": "biologique",
+          "product": "Savon noir",
+          "dosage": "50ml pour 1L d'eau",
+          "timing": "Pulvériser 2 fois par semaine",
+          "priority": "high"
+        }
+      ],
+      "prevention": [
+        "Variétés résistantes",
+        "Espacement adéquat",
+        "Auxiliaires naturels",
+        "Surveillance régulière"
+      ]
+    }
+  },
+  "metadata": {
+    "version": "2.0",
+    "last_updated": "2025-01-01",
+    "focus": "Maladies virales du maïs (MLN, MSV) et classification santé",
+    "classes_supported": ["MLN", "MSV", "saine"],
+    "legacy_classes": ["legionnaire_automne", "bruche_niebe", "cochenille_manioc"],
+    "reference_sources": [
+      "AFSTA - Document de position sur la maladie létale à nécrose du maïs",
+      "Étude sur les vecteurs d'insectes de la MLN"
+    ]
+  }
+}

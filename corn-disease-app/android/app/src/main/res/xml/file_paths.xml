@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="my_images" path="." />
+    <cache-path name="my_cache_images" path="." />
+
+    <!-- Répertoire interne de l'application -->
+    <files-path name="internal_files" path="." />
+
+    <!-- Cache interne -->
+    <cache-path name="internal_cache" path="." />
+
+    <!-- Stockage externe -->
+    <external-path name="external_files" path="." />
+
+    <!-- Cache externe -->
+    <external-cache-path name="external_cache" path="." />
+
+    <!-- Répertoire de stockage externe spécifique à l'app -->
+    <external-files-path name="external_app_files" path="." />
+
+    <!-- Répertoire Downloads -->
+    <external-path name="downloads" path="Download/" />
+
+    <!-- Répertoire Pictures -->
+    <external-path name="pictures" path="Pictures/" />
+
+    <!-- Répertoire Documents -->
+    <external-path name="documents" path="Documents/" />
+
+    <!-- Dossier racine externe -->
+    <external-path name="external_files" path="." />
+
+    <!-- Dossier de l'application -->
+    <external-files-path name="external_app_files" path="." />
+
+    <!-- Cache externe -->
+    <external-cache-path name="external_cache" path="." />
+
+    <!-- Fichiers internes -->
+    <files-path name="internal_files" path="." />
+
+    <!-- Dossier Downloads -->
+    <external-path name="downloads" path="Download/" />
+
+    <!-- Dossier Pictures -->
+    <external-path name="pictures" path="Pictures/" />
+
+    <!-- Dossier Documents -->
+    <external-path name="documents" path="Documents/" />
+</paths>
