@@ -91,8 +91,7 @@ const analyzeImage = async () => {
     const blob = await response.blob()
     const formData = new FormData()
     formData.append('image', blob, 'image.jpg')
-    const textBlob = new Blob([authStore?.state?.user?.user_id || 'unknown'], { type: 'text/plain' });
-    formData.append('user_id',textBlob )
+    formData.append('user_id',authStore?.user?.user_id || 'unknown' )
     const apiResponse = await fetch(`${config.public.apiBase}/api/classify`, {
       method: 'POST',
       body: formData
@@ -133,8 +132,7 @@ const analyzeBatch = async () => {
       const blob = await response.blob()
       formData.append('images', blob, `image_${i}.jpg`)
     }
-    const textBlob = new Blob([authStore?.state?.user?.user_id || 'unknown'], { type: 'text/plain' });
-    formData.append('user_id',textBlob )
+    formData.append('user_id',authStore?.user?.user_id || 'unknown' )
     const apiResponse = await fetch(`${config.public.apiBase}/api/classify/batch`, {
       method: 'POST',
       body: formData

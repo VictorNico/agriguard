@@ -762,10 +762,7 @@ def classify_disease():
     """Endpoint principal pour classifier une image avec sauvegarde permanente"""
     try:
         # Récupérer l'utilisateur connecté de manière optionnelle
-        if 'user_id' not in request.files:
-            return jsonify({"error": "No ID provided"}), 400
-
-        user_id = request.files['user_id']
+        user_id = request.form.get('user_id')
         # print(request.body)
 
         if 'image' not in request.files:
@@ -819,8 +816,8 @@ def classify_disease():
                     "classification": {
                         "predicted_class": classification["predicted_class"],
                         "class_id": classification["class_id"],
-                        "confidence": classification["confidence"],
-                        "confidence_percentage": classification["confidence_percentage"],
+                        "confidence": float(f"{float(str(classification['confidence'])):.2f}"),
+                        "confidence_percentage": float(f"{float(str(classification['confidence_percentage'])):.2f}"),
                         "severity": get_severity_level(classification["confidence"]),
                         "top5_predictions": classification.get("top5_predictions", [])
                     },
@@ -830,7 +827,7 @@ def classify_disease():
                         "user_agent": request.headers.get('User-Agent'),
                         "client_ip": request.remote_addr,
                         "image_saved": save_result["success"],
-                        "authenticated": user_id is not 'unknow'
+                        "authenticated": user_id not in 'unknow'
                     }
                 }
 
@@ -846,8 +843,8 @@ def classify_disease():
                     "classification": {
                         "predicted_class": classification["predicted_class"],
                         "class_id": classification["class_id"],
-                        "confidence": classification["confidence"],
-                        "confidence_percentage": classification["confidence_percentage"],
+                        "confidence": float(f"{float(str(classification['confidence'])):.2f}"),
+                        "confidence_percentage": float(f"{float(str(classification['confidence_percentage'])):.2f}"),
                         "severity": get_severity_level(classification["confidence"]),
                         "top5_predictions": classification.get("top5_predictions", [])
                     },
@@ -911,10 +908,7 @@ def classify_batch():
     """Endpoint pour classifier plusieurs images avec sauvegarde permanente"""
     try:
         # Récupérer l'utilisateur connecté de manière optionnelle
-        if 'user_id' not in request.files:
-            return jsonify({"error": "No ID provided"}), 400
-
-        user_id = request.files['user_id']
+        user_id = request.form.get('user_id')
         # print(user_id)
 
         if 'images' not in request.files:
@@ -976,7 +970,7 @@ def classify_batch():
                                 "client_ip": request.remote_addr,
                                 "image_saved": save_result["success"],
                                 "batch_processing": True,
-                                "authenticated": current_user is not None
+                                "authenticated": user_id not in 'unknown'
                             }
                         }
 
@@ -992,8 +986,8 @@ def classify_batch():
                             "classification": {
                                 "predicted_class": classification["classification"]["predicted_class"],
                                 "class_id": classification["classification"]["class_id"],
-                                "confidence": classification["classification"]["confidence"],
-                                "confidence_percentage": classification["classification"]["confidence_percentage"],
+                                "confidence": float(f"{float(str(classification['classification']['confidence'])):.2f}"),
+                                "confidence_percentage": float(f"{float(str(classification['classification']['confidence_percentage'])):.2f}"),
                                 "severity": get_severity_level(classification["classification"]["confidence"])
                             },
                             "disease_info": classification.get("disease_info", {}),
