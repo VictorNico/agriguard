@@ -1,6 +1,12 @@
 # AgriGuard AI - Setup MVP 
 ![Web and Mobile Splash Screens](./splash-screens.png)
 ![Web and Mobile Home Pages](./home-pages.png)
+
+---
+
+# [Presentation Link 📽️](./presentation/Presentation-DigFar-CONIA.pdf)
+
+---
 ## 🚀 ARCHITECTURE TECHNIQUE
 
 ```mermaid
@@ -120,9 +126,10 @@ source ~/.bashrc
 ```
 ---
 
-## 🔧 BACKEND FLASK
 
-### Project structure
+## Project structure
+### 🔧 BACKEND FLASK
+
 ```
 agriguard-backend
 ├── app.py                                  # entry server
@@ -158,9 +165,31 @@ agriguard-backend
 
 ```
 
-## 🔧 FRONTEND FLASK
+### 🔧 BACKEND ML
 
-### Project structure
+```
+agriguard-ml-pipeline
+├── balance_dataset.py
+├── best.pt
+├── convert_yolo_to_tfjs.py
+├── count_files.py
+├── detection
+│     ├── split_dataset.py
+│     └── train_yolov11s-cls.py
+├── finetune_yolo11_cls_gradcam_predict.py
+├── finetune_yolo11_cls_predict.py
+├── finetune_yolo11_cls_train.py
+├── predict_yolov11s-cls.py
+├── recup_files.py
+├── requirements.txt
+├── split_dataset.py
+├── train_yolov11s-cls.py
+├── train.py
+└── yolov11s-cls.pt
+
+```
+
+### 🔧 FRONTEND FLASK
 ```
 corn-disease-app
 ├── app.vue                                     # entry view
@@ -312,7 +341,7 @@ corn-disease-app
     ├── api-request.js
     └── persist-storage.ts
 ```
-
+---
 ## ⚡ RAPID DEPLOYMENT
 ### 1. Frontend Generation
 ```bash
@@ -399,8 +428,8 @@ open http://localhost:3000/api/health
 ### ✅ Demo Ready
 - [x] Prepared test images
 - [x] Demo scenarios
-- [ ] Realistic data
-- [ ] Performance fluide
+- [x] Realistic results
+- [x] Performance fluide
 
 
 ### Note

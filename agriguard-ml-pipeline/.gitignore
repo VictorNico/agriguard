@@ -1,0 +1,21 @@
+# Ignorer les fichiers de configuration
+configs/
+
+# Ignorer les fichiers de données
+dataset/
+
+dataset_splited/
+
+*.zip
+
+non_maize_plant_village/
+
+Plant_leaf_diseases_dataset_without_augmentation/
+
+test_dataset/
+
+yolo_classification/
+
+
+# Ignorer les dossiers de dépendances
+.agrimlvenv
