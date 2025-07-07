@@ -1,8 +1,0 @@
-# Ignorer les fichiers de log
-*.log
-
-# Ignorer le dossier de données
-data/
-
-# Ignorer les fichiers de configuration
-*venv
