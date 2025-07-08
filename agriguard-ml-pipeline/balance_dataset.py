@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from albumentations.augmentations.transforms import *
 
 # Configuration
-DATASET_DIR = "dataset/maize_disease/"
+DATASET_DIR = "dataset"
 TARGET_SIZE = (256, 256)
 EXTENSIONS = (".jpg", ".jpeg", ".png")
 AUG_PREFIX = "aug"
@@ -16,14 +16,19 @@ SHOW_SAMPLES = 5  # nombre de comparaisons à afficher après génération
 
 # Pipeline d’augmentation
 transform = A.Compose([
-    A.RandomBrightnessContrast(p=0.5),
+     A.RandomBrightnessContrast(p=0.5),
     A.HorizontalFlip(p=0.5),
     A.VerticalFlip(p=0.2),
     A.RandomRotate90(p=0.5),
+    A.Rotate(limit=30, p=0.8),
+    A.HueSaturationValue(p=0.4),
     A.GaussNoise(var_limit=(10.0, 50.0), p=0.3),
     A.Blur(blur_limit=3, p=0.2),
-    A.HueSaturationValue(p=0.3),
-    A.Resize(*TARGET_SIZE)
+    A.GaussianBlur(blur_limit=3, p=0.2),  # Alternative à Blur, à garder si tu veux mixer
+    A.MotionBlur(p=0.2),
+    A.ElasticTransform(p=0.1),
+    A.RandomResizedCrop(height=224, width=224, scale=(0.8, 1.0), p=0.4),
+    A.Resize(224, 224) 
 ])
 
 def collect_images(dataset_dir):
