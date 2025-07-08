@@ -6,8 +6,8 @@ from ultralytics import YOLO
 # === Configuration ===
 MODEL_PATH = "yolov11s-cls.pt"
 DATA_PATH = "dataset_split"
-EPOCHS = 50
-BATCH_SIZE = 16
+EPOCHS = 20
+BATCH_SIZE = 48
 IMG_SIZE = 224
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
